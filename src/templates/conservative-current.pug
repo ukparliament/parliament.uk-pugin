@@ -1,0 +1,36 @@
+extends layout.pug
+block content
+  a(href='party-current.pug') &lt; Previous page
+  h1 Current Conservative members of Parliament
+  .search-results-box
+    strong
+      | There are 582 Members in the
+      a(href='#') Conservative Party
+  include ../components/letter-navigation.pug
+  ol.result-list
+  li.result-item
+    ul.result-item-details
+      li.result-item-detail-name Nigel Adams
+      li MP for Selby &amp; Ainsty
+      li Conservative
+  li.result-item
+    ul.result-item-details
+      li.result-item-detail-name Adam Afriyie
+      li MP for Windsor
+      li Conservative
+  li.result-item
+    ul.result-item-details
+      li.result-item-detail-name Peter Aldous
+      li MP for Waveney
+      li Conservative
+  li.result-item
+    ul.result-item-details
+      li.result-item-detail-name Lucy Allan
+      li MP for Telford
+      li Conservative
+  li.result-item
+    ul.result-item-details
+      li.result-item-detail-name Heidi Allen
+      li MP for South Cambridgeshire
+      li Conservative
+  a(href='#top') Back to the top
