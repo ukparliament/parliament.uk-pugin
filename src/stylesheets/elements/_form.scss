@@ -1,0 +1,79 @@
+.form-group {
+  margin-bottom: $base-spacing-unit;
+}
+
+button,
+input,
+label,
+optgroup,
+select,
+textarea {
+  font-family: $base-font-stack;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+legend {
+  @include screenreader;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  padding-bottom: ($base-spacing-unit-tiny - 4);
+
+  .form-hint {
+    color: $hard-grey;
+    display: block;
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  border: solid 2px $black;
+  display: block;
+  padding: ($base-spacing-unit-tiny - 2);
+  width: 50%;
+}
+
+select {
+  border: solid 1px $black;
+  padding: ($base-spacing-unit-tiny - 4);
+  width: 50%;
+}
+
+textarea {
+  padding: ($base-spacing-unit-tiny - 2);
+}
+
+button,
+input[type="reset"],
+input[type="submit"] {
+  border: solid 1px $black;
+  font-weight: 600;
+  padding: $base-spacing-unit-small ($base-spacing-unit - 8);
+}
+
+
+@media print {
+  button,
+  input[type="reset"],
+  input[type="submit"],
+  legend {
+    display: none;
+  }
+}

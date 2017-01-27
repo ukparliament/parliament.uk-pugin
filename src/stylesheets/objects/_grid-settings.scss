@@ -1,0 +1,17 @@
+// Base Page Dimensions
+$max-width: 1280px;
+$min-width: 320px;
+
+// Base Grid Settings
+$column: 85px;
+$gutter: 20px;
+$grid-columns: 12;
+
+// Breakpoints
+$widescreen: new-breakpoint(min-width $max-width 12);
+$desktop: new-breakpoint(min-width 960px 12);
+$tablet: new-breakpoint(min-width 768px 10);
+$mobile: new-breakpoint(max-width 767px 4);
+
+// Visualise Grid
+$visual-grid: false;

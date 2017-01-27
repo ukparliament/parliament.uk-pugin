@@ -1,0 +1,80 @@
+// Base Typography Resets
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+// Fontsize Mixin Creates 'font-size' & 'line-height' in REM with PX fallback
+
+// Base Typography Settings - Non-Media Query Browsers and Tablet dimensions (pixels)
+h1 {
+  @include fontsize(34);
+}
+h2 {
+  @include fontsize(30);
+}
+h3 {
+  @include fontsize(26);
+}
+h4 {
+  @include fontsize(22);
+}
+h5 {
+  @include fontsize(18);
+}
+h6 {
+  @include fontsize(16);
+}
+p {
+  @include fontsize(14);
+}
+
+// Mobile Typography Settings (pixels)
+@include media($mobile) {
+  h1 {
+    @include fontsize(26);
+  }
+  h2 {
+    @include fontsize(20);
+  }
+  h3 {
+    @include fontsize(18);
+  }
+  h4 {
+    @include fontsize(16);
+  }
+  h5 {
+    @include fontsize(14);
+  }
+  h6 {
+    @include fontsize(14);
+  }
+  p {
+    @include fontsize(12);
+  }
+}
+
+// Desktop Typography Settings (pixels)
+@include media($desktop) {
+  h1 {
+    @include fontsize(40);
+  }
+  h2 {
+    @include fontsize(34);
+  }
+  h3 {
+    @include fontsize(28);
+  }
+  h4 {
+    @include fontsize(24);
+  }
+  h5 {
+    @include fontsize(20);
+  }
+  h6 {
+    @include fontsize(18);
+  }
+  p {
+    @include fontsize(16);
+  }
+}
