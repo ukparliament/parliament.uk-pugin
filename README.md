@@ -1,2 +1,2 @@
-# frontend-prototypes
-Static HTML protoyping of parliament web services
+# Front End Prototypes
+Static HTML prototyping of Parliament web services
