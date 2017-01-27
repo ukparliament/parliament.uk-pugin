@@ -1,0 +1,14 @@
+.contact-list {
+  margin-bottom: $base-spacing-unit-small;
+  & > dl {
+    padding: 0;
+    & > dt {
+      float: left;
+      clear: left;
+    }
+    & > dt {
+      font-weight: bold;
+      padding-right: $base-spacing-unit-tiny;
+    }
+  }
+}
