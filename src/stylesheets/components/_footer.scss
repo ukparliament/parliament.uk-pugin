@@ -11,6 +11,11 @@
     width: 118px;
     height: 22px;
   }
+  &__list {
+    list-style-type: none;
+    margin-top: $base-spacing-unit-tiny;
+    margin-left: 0;
+  }
 }
 
 @media print {

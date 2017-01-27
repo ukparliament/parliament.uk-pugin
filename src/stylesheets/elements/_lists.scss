@@ -14,21 +14,21 @@ li {
 // Mobile List Item Size (pixels)
 @include media($mobile) {
   li {
-    @include fontsize(12);
+    @include fontsize(13, 2);
   }
 }
 
 // Tablet List Item Size (pixels)
 @include media($tablet) {
   li {
-    @include fontsize(14);
+    @include fontsize(15, 2);
   }
 }
 
 // Desktop List Item Size (pixels)
 @include media($desktop) {
   li {
-    @include fontsize(16);
+    @include fontsize(15, 2);
   }
 }
 
@@ -42,20 +42,20 @@ dl, dt, dd {
 // Mobile Definition List Sizes (pixels)
 @include media($mobile) {
   dt, dd {
-    @include fontsize(12);
+    @include fontsize(13, 2);
   }
 }
 
 // Tablet Definition List Sizes (pixels)
 @include media($tablet) {
   dt, dd {
-    @include fontsize(14);
+    @include fontsize(15, 2);
   }
 }
 
 // Desktop Definition List Sizes (pixels)
 @include media($desktop) {
   dt, dd {
-    @include fontsize(16);
+    @include fontsize(16, 2);
   }
 }

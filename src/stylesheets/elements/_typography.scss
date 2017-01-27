@@ -8,73 +8,73 @@ h1, h2, h3, h4, h5, h6, p {
 
 // Base Typography Settings - Non-Media Query Browsers and Tablet dimensions (pixels)
 h1 {
-  @include fontsize(34);
+  @include fontsize(34, 1.5);
 }
 h2 {
-  @include fontsize(30);
+  @include fontsize(30, 1.5);
 }
 h3 {
-  @include fontsize(26);
+  @include fontsize(26, 1.5);
 }
 h4 {
-  @include fontsize(22);
+  @include fontsize(22, 1.5);
 }
 h5 {
-  @include fontsize(18);
+  @include fontsize(18, 1.5);
 }
 h6 {
-  @include fontsize(16);
+  @include fontsize(16, 2);
 }
 p {
-  @include fontsize(14);
+  @include fontsize(14, 2);
 }
 
 // Mobile Typography Settings (pixels)
 @include media($mobile) {
   h1 {
-    @include fontsize(26);
+    @include fontsize(26, 1.5);
   }
   h2 {
-    @include fontsize(20);
+    @include fontsize(20, 1.5);
   }
   h3 {
-    @include fontsize(18);
+    @include fontsize(18, 2);
   }
   h4 {
-    @include fontsize(16);
+    @include fontsize(16, 2);
   }
   h5 {
-    @include fontsize(14);
+    @include fontsize(14, 2);
   }
   h6 {
-    @include fontsize(14);
+    @include fontsize(14, 2);
   }
   p {
-    @include fontsize(12);
+    @include fontsize(13, 2);
   }
 }
 
 // Desktop Typography Settings (pixels)
 @include media($desktop) {
   h1 {
-    @include fontsize(40);
+    @include fontsize(40, 1.5);
   }
   h2 {
-    @include fontsize(34);
+    @include fontsize(34, 1.5);
   }
   h3 {
-    @include fontsize(28);
+    @include fontsize(28, 1.5);
   }
   h4 {
-    @include fontsize(24);
+    @include fontsize(24, 1.5);
   }
   h5 {
-    @include fontsize(20);
+    @include fontsize(20, 2);
   }
   h6 {
-    @include fontsize(18);
+    @include fontsize(18, 2);
   }
   p {
-    @include fontsize(16);
+    @include fontsize(16, 2);
   }
 }
