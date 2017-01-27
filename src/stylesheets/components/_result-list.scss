@@ -1,0 +1,16 @@
+.result-list {
+  margin: 0;
+  list-style: none;
+  ul {
+    margin: inherit;
+    list-style: inherit;
+  }
+  .result-item {
+    padding: $base-spacing-unit-tiny;
+    border-top: 1px solid #c1c1c1;
+    color: #5c5c5c;
+    a {
+      font-weight: bold
+    }
+  }
+}
