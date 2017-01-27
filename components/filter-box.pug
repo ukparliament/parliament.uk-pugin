@@ -1,0 +1,30 @@
+form.filter-box(name='filter-box')
+  fieldset
+    legend  Filter results
+    label(for='house-select') Select House
+    select#house-select
+      option(selected='selected', value='')
+        | Choose a house
+      option(value='house_of_commons')
+        | House of Commons
+      option(value='house_of_lords')
+        | House of Lords
+    label(for='party-select') Select Party
+    select#party-select
+      option(selected='selected', value='')
+        | Choose a party
+      option(value='conservative')
+        | Conservative
+      option(value='labour')
+        | Labour
+      option(value='liberal_democrats')
+        | Liberal Democrats
+    label(for='gender-select') Select Gender
+    select#gender-select
+      option(selected='selected', value='')
+        | Choose a gender
+      option(value='male')
+        | Male
+      option(value='female')
+        | Female
+  input(type='submit', name='filter', value='filter')
