@@ -1,0 +1,16 @@
+// Full Screen Container
+.c-fs {
+  @include outer-container(100%);
+}
+
+// Full Grid Width Container
+.c-fg {
+  @include outer-container;
+}
+
+// Standard Row
+.row {
+  @include row();
+  padding-left: $base-spacing-unit-small;
+  padding-right: $base-spacing-unit-small;
+}

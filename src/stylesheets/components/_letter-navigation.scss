@@ -1,0 +1,37 @@
+.atoz-letters {
+  @include outer-container;
+  list-style-type: none;
+  margin-top: $base-spacing-unit-tiny;
+
+  li {
+    @include span-columns (.905);
+
+    background-color: $white;
+    border: solid 1px $black;
+    display: list-item;
+    float: left;
+    margin-bottom: $base-spacing-unit-tiny;
+    padding: 0;
+    text-align: center;
+
+    a {
+      color: $black;
+      display: block;
+      padding: $base-spacing-unit-small;
+      text-decoration: none;
+    }
+
+    @include media($mobile) {
+      @include span-columns (.95);
+    }
+  }
+
+  li.active,
+  li:hover {
+    background-color: $black;
+
+    a {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.header {
+  background-color: $night-rider;
+  padding-top: $base-spacing-unit-small;
+  padding-bottom: $base-spacing-unit-small;
+  &__logo {
+    display: block;
+    margin-left: $base-spacing-unit-small;
+    background: url('../images/parliament-uk--white.png');
+    background-image: url('../images/parliament-uk--white.svg'), none;
+    background-repeat: no-repeat;
+    width: 268px;
+    height: 50px;
+  }
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+}
