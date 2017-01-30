@@ -1,42 +1,43 @@
 extends ../../layouts/layout.pug
 block content
   // Back Button
-  a(href='people-members-current.html') &lt; Previous page
+  .spacer__vertical-small
+    a(href='people-members-current.html') &lt; Previous page
   // Page Title
   h1 Current MPs in the House of Commons
   include ../../components/letter-navigation.pug
   // Result List
   ol.result-list
     li.result-item
-      ul.result-item-details
+      ul
         li
-          a.result-item-detail-name(href='people-id.html') Abbott, Diane
+          a(href='people-id.html') Abbott, Diane
         li MP for Hackney North and Stoke Newington
         li Labour
     li.result-item
-      ul.result-item-details
+      ul
         li
-          a.result-item-detail-name(href='#') Abrahams, Debbie
+          a(href='#') Abrahams, Debbie
         li MP for Oldham East and Saddleworth
         li Labour
     li.result-item
-      ul.result-item-details
+      ul
         li
-          a.result-item-detail-name(href='#') Adams, Nigel
+          a(href='#') Adams, Nigel
         li MP for Selby &amp; Ainsty
         li Conservative
     li.result-item
-      ul.result-item-details
+      ul
         li
-          a.result-item-detail-name(href='#') Ahmed-Sheikh, Tasmina
+          a(href='#') Ahmed-Sheikh, Tasmina
         li MP for Ochil and South Perthshire
         li Scottish National Party
     li.result-item
-      ul.result-item-details
+      ul
         li
-          a.result-item-detail-name(href='#') Aldous, Peter
+          a(href='#') Aldous, Peter
         li MP for Waveney
         li Conservative
   // Back to Top Button
-  a(href='#top') Back to the top
-
+  .spacer__vertical-standard
+    a(href='#top') Back to the top
