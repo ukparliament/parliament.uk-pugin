@@ -23,13 +23,13 @@
 
     @include media($mobile) {
       //@include span-columns (.95);
-      width: 12%;
-      background: #c1c1c1;
+      width: 13%;
+      background: $soft-grey;
       font-weight: bold;
       color: #333;
-      border: none;
-      margin-right: 4px;
-      margin-bottom: 4px;
+      margin: 0;
+      border-width: 0 2px 2px 0;
+      border-color: white;
       a {
         padding: 5px;
       }
