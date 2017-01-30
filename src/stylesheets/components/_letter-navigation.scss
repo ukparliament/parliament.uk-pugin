@@ -1,7 +1,7 @@
 .atoz-letters {
   @include outer-container;
   list-style-type: none;
-  margin-top: $base-spacing-unit-tiny;
+  margin: $base-spacing-unit-tiny 0 $base-spacing-unit-small;
 
   li {
     @include span-columns (.905);
@@ -22,14 +22,23 @@
     }
 
     @include media($mobile) {
-      @include span-columns (.95);
+      //@include span-columns (.95);
+      width: 12%;
+      background: #c1c1c1;
+      font-weight: bold;
+      color: #333;
+      border: none;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      a {
+        padding: 5px;
+      }
     }
   }
 
   li.active,
   li:hover {
-    background-color: $black;
-
+    background-color: $night-rider;
     a {
       color: $white;
     }
