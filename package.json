@@ -24,7 +24,6 @@
     "imagemin-cli": "^3.0.0",
     "node-sass": "^4.3.0",
     "postcss-cli": "^2.6.0",
-    "pug": "^2.0.0-beta9",
     "uglify-js": "^2.7.5"
   },
   "devDependencies": {
@@ -36,6 +35,6 @@
     "eslint-plugin-standard": "^2.0.1",
     "minimist": "^1.2.0",
     "pa11y": "^4.4.0",
-    "pug": "^2.0.0-beta9"
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
