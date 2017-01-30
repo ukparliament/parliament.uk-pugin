@@ -7,10 +7,13 @@
   }
   .result-item {
     padding: $base-spacing-unit-tiny;
-    border-top: 1px solid #c1c1c1;
-    color: #5c5c5c;
+    border-top: 1px solid $dark-grey;
+    color: #5C5C5C;
     a {
-      font-weight: bold
+      font-weight: bold;
+    }
+    &:last-child {
+      border-bottom: 1px solid $dark-grey;
     }
   }
 }
