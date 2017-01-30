@@ -1,0 +1,13 @@
+.spacer {
+  display: block;
+  &__vertical {
+    &-small {
+      padding-top: $base-spacing-unit-small;
+      padding-bottom: $base-spacing-unit-small;
+    }
+    &-standard {
+      padding-top: $base-spacing-unit;
+      padding-bottom: $base-spacing-unit;
+    }
+  }
+}

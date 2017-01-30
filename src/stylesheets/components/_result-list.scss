@@ -7,13 +7,13 @@
   }
   .result-item {
     padding: $base-spacing-unit-tiny;
-    border-top: 1px solid $dark-grey;
-    color: #5C5C5C;
+    border-top: 1px solid $soft-grey;
+    color: $dark-grey;
     a {
       font-weight: bold;
     }
     &:last-child {
-      border-bottom: 1px solid $dark-grey;
+      border-bottom: 1px solid $soft-grey;
     }
   }
 }
