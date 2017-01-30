@@ -16,6 +16,7 @@ UGLIFY_JS=./node_modules/.bin/uglifyjs
 IMAGEMIN=./node_modules/.bin/imagemin
 BROWSER_SYNC=./node_modules/.bin/browser-sync
 ONCHANGE=./node_modules/.bin/onchange
+PUG=./node_modules/.bin/pug
 
 install:
 	@npm i
@@ -42,7 +43,7 @@ serve: clean build
 	@$(BROWSER_SYNC) start --server --files "$(PUBLIC_FOLDER)/stylesheets/*.css, $(PUBLIC_FOLDER)/javascripts/*.js, **/*.pug, !node_modules/**/*.html"
 
 templates:
-	pug $(SRC_FOLDER)/templates -P --out $(PUBLIC_FOLDER)
+	@$(PUG) $(SRC_FOLDER)/templates -P --out $(PUBLIC_FOLDER)
 	@$(BROWSER_SYNC) reload --files "$(PUBLIC_FOLDER)/templates/*.html"
 
 build: css js images templates
