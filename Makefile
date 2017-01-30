@@ -1,11 +1,11 @@
 .PHONY: install clean serve build
 
 # Common variables
+SRC_FOLDER=src
 PUBLIC_FOLDER=_public
 JAVASCRIPTS_LOC=src/javascripts
 STYLESHEETS_LOC=src/stylesheets
 IMAGES_LOC=src/images
-PUG_LOC=components
 REPORTS_FOLDER=reports
 
 # Node module variables
@@ -41,8 +41,11 @@ images:
 serve: clean build
 	@$(BROWSER_SYNC) start --server --files "$(PUBLIC_FOLDER)/stylesheets/*.css, $(PUBLIC_FOLDER)/javascripts/*.js, **/*.pug, !node_modules/**/*.html"
 
-build: css js images
-	pug templates -P --out $(PUBLIC_FOLDER)
+templates:
+	pug $(SRC_FOLDER)/templates -P --out $(PUBLIC_FOLDER)
+	@$(BROWSER_SYNC) reload --files "$(PUBLIC_FOLDER)/templates/*.html"
+
+build: css js images templates
 build_prod: lint build
 
 test:
@@ -51,7 +54,7 @@ test:
 	@node scripts/pa11y.js
 
 watch:
-	@node scripts/watch.js $(STYLESHEETS_LOC)=css $(JAVASCRIPTS_LOC)=js $(IMAGES_LOC)=images PUG_LOC=pug
+	@node scripts/watch.js $(STYLESHEETS_LOC)=css $(JAVASCRIPTS_LOC)=js $(IMAGES_LOC)=images $(SRC_FOLDER)/templates=templates
 
 server:
 	@cp index.html $(PUBLIC_FOLDER) || :
