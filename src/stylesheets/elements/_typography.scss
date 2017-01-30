@@ -57,7 +57,7 @@ p {
 // Desktop Typography Settings (pixels)
 @include media($desktop) {
   h1 {
-    @include fontsize(40, 1.5);
+    @include fontsize(40, 2);
   }
   h2 {
     @include fontsize(34, 1.5);
