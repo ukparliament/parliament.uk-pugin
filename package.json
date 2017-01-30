@@ -4,6 +4,9 @@
   "description": "A static build system for UK Parliament prototypes.",
   "author": "UK Parliament",
   "license": "MIT",
+  "engines": {
+    "node": "7.x"
+  },
   "homepage": "https://github.com/ukparliament/pugin-static#readme",
   "repository": {
     "type": "git",
