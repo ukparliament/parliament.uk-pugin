@@ -1,23 +1,24 @@
 .button-link {
   display: block;
-  border: 1px solid $soft-grey;
-  padding: $base-spacing-unit-small;
-  text-decoration: none;
-  border-radius: 3px;
-  color: $night-rider;
-  margin-bottom: $base-spacing-unit-small;
   position: relative;
+  padding: $base-spacing-unit-small;
+  margin-bottom: $base-spacing-unit-small;
+  border: 1px solid $soft-grey;
+  @include border-radius($base-spacing-unit-tiny / 2);
+  color: $night-rider;
+  text-decoration: none;
   &:visited {
     color: $night-rider;
   }
   span {
+    display:block;
     position: absolute;
     top: calc(50% - 6px);
     right:12px;
-    display:block;
     height: 12px;
     width: 7px;
-    background: url(../images/sprites.png) no-repeat;
+    background-image: url('../images/sprites-arrows.png');
+    background-repeat: no-repeat;
     background-position: 100% 50%;
   }
 }
