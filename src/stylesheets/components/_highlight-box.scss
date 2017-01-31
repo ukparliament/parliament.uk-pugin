@@ -1,5 +1,11 @@
 .highlight-box {
-  padding: $base-spacing-unit-tiny;
-  background: $light-grey;
+  display: block;
+  margin-top: $base-spacing-unit-small;
+  margin-bottom: $base-spacing-unit-small;
+  padding-top: $base-spacing-unit-tiny;
+  padding-right: $base-spacing-unit-tiny;
+  padding-bottom: $base-spacing-unit-tiny;
+  padding-left: $base-spacing-unit-small;
+  background-color: $light-grey;
   border-left: 3px solid $hard-grey;
 }

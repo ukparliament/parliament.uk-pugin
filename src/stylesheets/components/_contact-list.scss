@@ -1,6 +1,8 @@
 .contact-list {
+  display: block;
   margin-bottom: $base-spacing-unit-small;
   & > dl {
+    margin-top: $base-spacing-unit-tiny;
     padding: 0;
     & > dt {
       float: left;

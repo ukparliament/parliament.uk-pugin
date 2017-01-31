@@ -1,45 +1,40 @@
 .atoz-letters {
-  @include outer-container;
+  //@include outer-container;
+  @include clearfix;
   list-style-type: none;
-  margin: $base-spacing-unit-tiny 0 $base-spacing-unit-small;
-
-  li {
-    @include span-columns (.905);
-
-    background-color: $white;
-    border: solid 1px $black;
+  margin-top: $base-spacing-unit-tiny;
+  margin-bottom: $base-spacing-unit;
+  margin-left: 0;
+  & > p {
+    padding-bottom: $base-spacing-unit-tiny;
+  }
+  & > li {
     display: list-item;
     float: left;
-    margin-bottom: $base-spacing-unit-tiny;
+    width: 3.83%;
+    margin: 0;
     padding: 0;
+    background-color: $soft-grey;
+    color: $night-rider;
+    font-weight: bold;
     text-align: center;
-
-    a {
-      color: $black;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    border-color: white;
+    & > a {
       display: block;
-      padding: $base-spacing-unit-small;
+      padding: $base-spacing-unit-tiny;
+      color: $black;
       text-decoration: none;
     }
-
     @include media($mobile) {
-      //@include span-columns (.95);
       width: 13%;
-      background: $soft-grey;
-      font-weight: bold;
-      color: #333;
-      margin: 0;
-      border-width: 0 2px 2px 0;
-      border-color: white;
-      a {
-        padding: 5px;
-      }
     }
   }
-
-  li.active,
-  li:hover {
+  & > li.active,
+  & > li:hover {
     background-color: $night-rider;
-    a {
+    & > a {
       color: $white;
     }
   }

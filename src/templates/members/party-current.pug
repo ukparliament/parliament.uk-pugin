@@ -1,17 +1,17 @@
 extends ../../layouts/layout.pug
 block content
-  a(href='people-members-current.html') &lt; Previous page
+  // Back Button
+  .spacer__vertical-small
+    a(href='people-members-current.html') &lt; Previous page
+  // Page Title
   h1 Parties and groups
-  hr
-  a(href='#')
-    | Bishops
-    span &gt;
-  a(href='conservative-current.html')
+  // Option Tags
+  a.button-link(href='conservative-current.html')
     | Conservative Party
-    span &gt;
-  a(href='#')
-    | Labour
-    span &gt;
-  a(href='#')
+    span
+  a.button-link(href='#')
+    | Labour Party
+    span
+  a.button-link(href='#')
     | Liberal Democrats
-    span &gt;
+    span
