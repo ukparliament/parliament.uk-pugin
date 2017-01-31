@@ -3,22 +3,27 @@
   position: relative;
   padding: $base-spacing-unit-small;
   margin-bottom: $base-spacing-unit-small;
-  border: 1px solid $soft-grey;
+  border: 1px solid $grey-4;
   @include border-radius($base-spacing-unit-tiny / 2);
-  color: $night-rider;
+  color: $grey-1;
   text-decoration: none;
   &:visited {
-    color: $night-rider;
+    color: $grey-1;
   }
   span {
     display:block;
     position: absolute;
-    top: calc(50% - 6px);
+    top: calc(50% - 7px);
     right:12px;
-    height: 12px;
-    width: 7px;
-    background-image: url('../images/sprites-arrows.png');
+    height: 14px;
+    width: 10px; // Arrow Left & Right
+    // width: 20px; // Arrow Up & Down
+    background: url('../images/sprites-arrows.png');
+    background-image: url('../images/sprites-arrows.svg'), none;
     background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-position: 100% 50%; // Arrow Right
+    // background-position: 75% 50%; // Arrow Down
+    // background-position: 25% 50%; // Arrow Up
+    // background-position: 0% 50%; // Arrow Left
   }
 }
