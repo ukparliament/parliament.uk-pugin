@@ -6,7 +6,7 @@
     list-style: inherit;
   }
   .result-item {
-    padding: $base-spacing-unit-tiny;
+    padding: $base-spacing-unit-tiny 0;
     border-top: 1px solid $grey-4;
     color: $grey-2;
     a {

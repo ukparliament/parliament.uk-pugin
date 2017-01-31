@@ -1,7 +1,7 @@
 .letter-navigation {
   @include clearfix;
   list-style-type: none;
-  margin-top: $base-spacing-unit-tiny;
+  margin-top: $base-spacing-unit-small;
   margin-bottom: $base-spacing-unit;
   margin-left: 0;
   & > p {
@@ -18,7 +18,7 @@
     font-weight: bold;
     text-align: center;
     border-style: solid;
-    border-width: 0 2px 2px 0;
+    border-width: 0 3px 3px 0;
     border-color: white;
     & > a {
       display: block;

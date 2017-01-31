@@ -1,6 +1,13 @@
 .spacer {
   display: block;
   &__vertical {
+    &-top {
+      padding-top: $base-spacing-unit-small;
+    }
+    &-tiny {
+      padding-top: $base-spacing-unit-tiny;
+      padding-bottom: $base-spacing-unit-tiny;
+    }
     &-small {
       padding-top: $base-spacing-unit-small;
       padding-bottom: $base-spacing-unit-small;
