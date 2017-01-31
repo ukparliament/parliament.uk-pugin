@@ -1,7 +1,10 @@
-// Variables inherited from 'settings/_fonts.scss'
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+// Variables inherited from 'settings/_fonts.scss'
+body {
   color: $grey-1;
   background: $white;
   direction: ltr;

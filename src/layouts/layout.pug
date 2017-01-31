@@ -5,11 +5,13 @@ html(lang="en")
     link(rel="stylesheet", href="../../_public/stylesheets/main.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
   body
-    a(id="top")
-    include ../components/header.pug
-    include ../components/status.pug
-    .c-fg
-      .row
-        block content
+    .c-wrap
+      a(id="top")
+      include ../components/header.pug
+      include ../components/status.pug
+      .c-fg
+        .row
+          block content
+      .footer-push
     include ../components/footer.pug
     script(src="../../_public/javascripts/main.js")
