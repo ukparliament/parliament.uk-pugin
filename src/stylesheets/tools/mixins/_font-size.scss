@@ -7,3 +7,11 @@
   font-size:   ($size / 16) + 0rem;
   line-height: ($line-calc / 16) + 0rem;
 }
+
+@mixin fontsize-test($size, $line){
+  //$line-calc: $size * $line;
+  font-size:   $size + 0px;
+  line-height: $line + 0px;
+  font-size:   ($size / 16) + 0rem;
+  line-height: ($line / 16) + 0rem;
+}
