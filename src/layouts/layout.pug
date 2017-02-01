@@ -4,7 +4,7 @@ html(lang="en")
     title Parliamentary Digital Service
     link(rel="stylesheet", href="../../_public/stylesheets/main.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-  body
+  body.no-js
     .c-wrap
       a(id="top")
       include ../components/header.pug
@@ -15,3 +15,4 @@ html(lang="en")
       .footer-push
     include ../components/footer.pug
     script(src="../../_public/javascripts/main.js")
+    block script

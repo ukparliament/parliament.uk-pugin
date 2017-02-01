@@ -1,12 +1,18 @@
 .button-link {
   display: block;
   position: relative;
-  padding: $base-spacing-unit-small;
+  padding-top: $base-spacing-unit-small;
+  padding-bottom: $base-spacing-unit-small;
+  padding-left: $base-spacing-unit-small;
+  padding-right: $base-spacing-unit-small;
   margin-bottom: $base-spacing-unit-small;
   border: 1px solid $grey-4;
   @include border-radius($base-spacing-unit-tiny / 2);
   color: $grey-1;
   text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus,
   &:visited {
     color: $grey-1;
   }
@@ -17,13 +23,9 @@
     right:12px;
     height: 14px;
     width: 10px; // Arrow Left & Right
-    // width: 20px; // Arrow Up & Down
     background: url('../images/sprites-arrows.png');
     background-image: url('../images/sprites-arrows.svg'), none;
     background-repeat: no-repeat;
     background-position: 100% 50%; // Arrow Right
-    // background-position: 75% 50%; // Arrow Down
-    // background-position: 25% 50%; // Arrow Up
-    // background-position: 0% 50%; // Arrow Left
   }
 }
