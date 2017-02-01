@@ -1,9 +1,5 @@
 .spacer {
-  display: block;
   &__vertical {
-    &-top {
-      padding-top: $base-spacing-unit-small;
-    }
     &-tiny {
       padding-top: $base-spacing-unit-tiny;
       padding-bottom: $base-spacing-unit-tiny;
@@ -12,9 +8,51 @@
       padding-top: $base-spacing-unit-small;
       padding-bottom: $base-spacing-unit-small;
     }
-    &-standard {
-      padding-top: $base-spacing-unit;
-      padding-bottom: $base-spacing-unit;
+    &-medium {
+      padding-top: $base-spacing-unit-medium;
+      padding-bottom: $base-spacing-unit-medium;
+    }
+    &-large {
+      padding-top: $base-spacing-unit-large;
+      padding-bottom: $base-spacing-unit-large;
+    }
+    &-extra-large {
+      padding-top: $base-spacing-unit-extra-large;
+      padding-bottom: $base-spacing-unit-extra-large;
+    }
+    &_top {
+      &-tiny {
+        padding-top: $base-spacing-unit-tiny;
+      }
+      &-small {
+        padding-top: $base-spacing-unit-small;
+      }
+      &-medium {
+        padding-top: $base-spacing-unit-medium;
+      }
+      &-large {
+        padding-top: $base-spacing-unit-large;
+      }
+      &-extra-large {
+        padding-top: $base-spacing-unit-extra-large;
+      }
+    }
+    &_bottom {
+      &-tiny {
+        padding-bottom: $base-spacing-unit-tiny;
+      }
+      &-small {
+        padding-bottom: $base-spacing-unit-small;
+      }
+      &-medium {
+        padding-bottom: $base-spacing-unit-medium;
+      }
+      &-large {
+        padding-bottom: $base-spacing-unit-large;
+      }
+      &-extra-large {
+        padding-bottom: $base-spacing-unit-extra-large;
+      }
     }
   }
 }

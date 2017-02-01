@@ -32,13 +32,13 @@ p {
 // Mobile Typography Settings (pixels)
 @include media($mobile) {
   h1 {
-    @include fontsize(26, 1.5);
+    @include fontsize-test(24, 36);
   }
   h2 {
-    @include fontsize(20, 1.5);
+    @include fontsize-test(20, 28);
   }
   h3 {
-    @include fontsize(18, 2);
+    @include fontsize-test(16, 24);
   }
   h4 {
     @include fontsize(16, 2);
@@ -49,8 +49,8 @@ p {
   h6 {
     @include fontsize(14, 2);
   }
-  p {
-    @include fontsize(13, 2);
+  p, a {
+    @include fontsize-test(14, 22);
   }
 }
 
