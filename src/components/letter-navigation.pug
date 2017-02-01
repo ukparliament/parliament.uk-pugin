@@ -1,10 +1,7 @@
 nav(aria-label='Paged navigation')
-  ul.letter-navigation
-    p Select a letter
-    each val in ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-      if val == "A"
-        li.active(data-letter=val)
-          a(data-atoz-see='true', href='#')= val
-      else
-        li(data-letter=val)
-          a(data-atoz-see='true', href='#')= val
+	ul.letter-navigation
+		p Select a letter
+
+		each val, index in ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+			li(data-letter=val, class= (index === 0 ? "active" : undefined))
+				a(data-atoz-see='true', href='#')= val
