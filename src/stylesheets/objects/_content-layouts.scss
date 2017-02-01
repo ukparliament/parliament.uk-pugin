@@ -20,7 +20,7 @@
       padding-top: $base-spacing-unit-extra-large;
       padding-bottom: $base-spacing-unit-extra-large;
     }
-    &_top {
+    &-top {
       &-tiny {
         padding-top: $base-spacing-unit-tiny;
       }
@@ -37,7 +37,7 @@
         padding-top: $base-spacing-unit-extra-large;
       }
     }
-    &_bottom {
+    &-bottom {
       &-tiny {
         padding-bottom: $base-spacing-unit-tiny;
       }
