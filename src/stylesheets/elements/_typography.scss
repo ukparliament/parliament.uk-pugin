@@ -51,7 +51,7 @@ p {
   }
   p, a {
     @include fontsize-test(14, 22);
-    margin-bottom: 10px;
+    margin-bottom: $base-spacing-unit-tiny;
   }
 }
 
