@@ -9,36 +9,13 @@ block content
   include ../../components/letter-navigation.pug
   // Result List
   ol.result-list
-    li.result-item
-      ul
-        li
-          a(href='people-id.html') Abbott, Diane
-        li MP for Hackney North and Stoke Newington
-        li Labour
-    li.result-item
-      ul
-        li
-          a(href='#') Abrahams, Debbie
-        li MP for Oldham East and Saddleworth
-        li Labour
-    li.result-item
-      ul
-        li
-          a(href='#') Adams, Nigel
-        li MP for Selby &amp; Ainsty
-        li Conservative
-    li.result-item
-      ul
-        li
-          a(href='#') Ahmed-Sheikh, Tasmina
-        li MP for Ochil and South Perthshire
-        li Scottish National Party
-    li.result-item
-      ul
-        li
-          a(href='#') Aldous, Peter
-        li MP for Waveney
-        li Conservative
+    each object in [{name: 'Abbott, Diane', constituency: 'MP for Hackney North and Stoke Newington', party: 'Labour'},{name: 'Abrahams, Debbie', constituency: 'MP for Oldham East and Saddleworth', party: 'Labour'},{name: 'Adams, Nigel', constituency: 'MP for Selby & Ainsty', party: 'Conservative'},{name: 'Ahmed-Sheikh, Tasmina', constituency: 'MP for Ochil and South Perthshire', party: 'Scottish National Party'},{name: 'Aldous, Peter', constituency: 'MP for Waveney', party: 'Conservative'}]
+      li.result-list__item
+        ul
+          li
+            a(href= (object.name === "Abbott, Diane" ? "people-id.html" : "#"))= object.name
+          li= object.constituency
+          li= object.party
   // Back to Top Button
   .spacer__vertical-medium
     a(href='#top') Back to the top

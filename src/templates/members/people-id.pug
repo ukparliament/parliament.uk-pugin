@@ -24,16 +24,12 @@ block content
   // Electoral History
   h2.bordered.spacer__vertical-top-small Election History
   ol.result-list
-    li.result-item
-      ul
-        li MP for #[a(href='#') Hackney North and Stoke Newington]
-        li 2015 - Current
-        li #[a(href='#') Labour]
-    li.result-item
-      ul
-        li MP for #[a(href='#') Hackney North and Stoke Newington]
-        li 1987 - 2015
-        li #[a(href='#') Labour]
+    each object in [{constituency: 'Hackney North and Stoke Newington', sitting_duration: '2015 - Current', party: "Labour"},{constituency: 'Hackney North and Stoke Newington', sitting_duration: '1987 - 2015', party: 'Labour'}]
+      li.result-list__item
+        ul
+          li MP for #[a(href='#') #{object.constituency}]
+          li=object.sitting_duration
+          li #[a(href='#') #{object.party}]
   // Back to Top Button
   .spacer__vertical-medium
     a(href='#top') Back to the top
