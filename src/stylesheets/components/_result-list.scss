@@ -5,7 +5,7 @@
     margin: inherit;
     list-style: inherit;
   }
-  .result-item {
+  &__item {
     padding: $base-spacing-unit-tiny 0;
     border-top: 1px solid $grey-4;
     color: $grey-2;

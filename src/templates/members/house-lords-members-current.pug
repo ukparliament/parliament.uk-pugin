@@ -9,31 +9,12 @@ block content
   include ../../components/letter-navigation.pug
   // Result List
   ol.result-list
-    li.result-item
-      ul
-        li
-          a(href='#') Lord Aberdare
-        li Crossbench
-    li.result-item
-      ul
-        li
-          a(href='#') Baroness Adams of Craigielea
-        li Labour
-    li.result-item
-      ul
-        li
-          a(href='#') Lord Addington
-        li Liberal Democrats
-    li.result-item
-      ul
-        li
-          a(href='#') Lord Adebowale
-        li Crossbench
-    li.result-item
-      ul
-        li
-          a(href='#') Lord Adonis
-        li Non-affiliated
+    each object in [{name: 'Lord Aberdare', party: 'Crossbench'},{name: 'Baroness Adams of Craigielea', party: 'Labour'},{name: 'Lord Addington', party: 'Liberal Democrats'},{name: 'Lord Adebowale', party: 'Crossbench'},{name: 'Lord Adonis', party: 'Non-affiliated'}]
+      li.result-list__item
+        ul
+          li
+            a(href="#")= object.name
+          li= object.party
   // Back to Top Button
   .spacer__vertical-medium
     a(href='#top') Back to the top
