@@ -8,6 +8,7 @@ block content
   p MPs and Lords can only help with issues that are the responsibility of UK Parliament.
   p Often the right person to contact will be a local councillor, the Citizens’ Advice Bureau or an ombudsman.
   p If you live in Scotland, Wales or Northern Ireland you may need to contact your MSP, AM or MLA.
+  br
   // When to contact your MP
   h2.slider-link When to contact your MP
   .slider-content
@@ -69,8 +70,6 @@ block content
 block script
   script(type='text/javascript').
     document.addEventListener("DOMContentLoaded", function() {
-      // 1. pass in the class of element you want to activate the content to be shown
-      // 2. pass in the class of the visual element you want shown when content closed
-      // 3. pass in the class of the visual element you want shown when content open
-      contentSlider('slider-link', 'open', 'close');
+      // Pass in the class of element you want to activate the content to be shown
+      contentSlider('slider-link');
     });
