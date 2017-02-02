@@ -9,6 +9,7 @@
 }
 
 .slider-content {
+  padding-bottom: $base-spacing-unit-small;
   & > ul {
     margin-left: $base-spacing-unit;
   }
@@ -20,6 +21,7 @@
 
 .has-js {
   .slider-link {
+    padding-right: $base-spacing-unit-large;
     color: $bright-blue;
     text-decoration: underline;
     &:hover,
