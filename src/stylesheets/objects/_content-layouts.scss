@@ -3,10 +3,18 @@
     &-tiny {
       padding-top: $base-spacing-unit-tiny;
       padding-bottom: $base-spacing-unit-tiny;
+      @include media($desktop) {
+        padding-top: $base-spacing-unit-small;
+        padding-bottom: $base-spacing-unit-small;
+      }
     }
     &-small {
       padding-top: $base-spacing-unit-small;
       padding-bottom: $base-spacing-unit-small;
+      @include media($desktop) {
+        padding-top: $base-spacing-unit-medium;
+        padding-bottom: $base-spacing-unit-medium;
+      }
     }
     &-medium {
       padding-top: $base-spacing-unit-medium;
@@ -23,9 +31,15 @@
     &-top {
       &-tiny {
         padding-top: $base-spacing-unit-tiny;
+        @include media($desktop) {
+          padding-top: $base-spacing-unit-small;
+        }
       }
       &-small {
         padding-top: $base-spacing-unit-small;
+        @include media($desktop) {
+          padding-top: $base-spacing-unit-medium;
+        }
       }
       &-medium {
         padding-top: $base-spacing-unit-medium;
@@ -40,9 +54,15 @@
     &-bottom {
       &-tiny {
         padding-bottom: $base-spacing-unit-tiny;
+        @include media($desktop) {
+          padding-bottom: $base-spacing-unit-small;
+        }
       }
       &-small {
         padding-bottom: $base-spacing-unit-small;
+        @include media($desktop) {
+          padding-bottom: $base-spacing-unit-medium;
+        }
       }
       &-medium {
         padding-bottom: $base-spacing-unit-medium;
