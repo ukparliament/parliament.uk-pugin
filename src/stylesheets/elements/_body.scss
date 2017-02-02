@@ -1,12 +1,13 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html {
+  position: relative;
+  min-height: 100%;
 }
 // Variables inherited from 'settings/_fonts.scss'
 body {
-  color: $grey-1;
-  background: $white;
+  margin-bottom: 150px; // equal to footer height
+  padding: 0;
+  background-color: $white;
   direction: ltr;
   font-family: $base-font-stack;
+  color: $grey-1;
 }

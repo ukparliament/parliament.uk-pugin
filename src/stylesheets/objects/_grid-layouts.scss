@@ -8,18 +8,6 @@
   @include outer-container;
 }
 
-// All Content Wrapper For Sticky Footer
-// This wraps all page content apart from footer
-.c-wrap {
-  min-height: 100%;
-  margin-bottom: -150px;
-}
-
-// Push Class For Sticky Footer
-.footer-push {
-  height: 150px; // Must equal footer height
-}
-
 // Standard Row
 .row {
   @include row();
