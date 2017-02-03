@@ -18,6 +18,11 @@ BROWSER_SYNC=./node_modules/.bin/browser-sync
 ONCHANGE=./node_modules/.bin/onchange
 PUG=./node_modules/.bin/pug
 
+# AWS S3 bucket to deploy to
+# TODO: move "pdswebops" to an environment variable that GoCD will pickup 
+S3_BUCKET = s3://pdswebops.pugin/
+
+
 install:
 	@npm i
 
@@ -48,6 +53,10 @@ templates:
 
 build: css js images templates
 build_prod: lint build
+
+deploytos3: build
+	aws s3 sync --acl=public-read --delete --exclude "./_public/members/*" ./_public/ $(S3_BUCKET)
+	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
 test:
 	@mkdir -p $(REPORTS_FOLDER)

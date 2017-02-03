@@ -11,7 +11,12 @@ Static HTML prototypes created by the [Parliamentary Digital Service][pds] for P
 * [Nodejs][nodejs] 6.0.0 and above
 * [Pug-cli] [pug-cli] 1.0.0-alpha6 and above
 
-## Installation
+```bash
+sudo npm install node -g
+sudo npm install pug-cli -g
+```
+
+## Setup
 To install, clone from GitHub and `npm install` in the cloned directory:
 
 ```bash
