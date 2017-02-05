@@ -20,7 +20,7 @@ PUG=./node_modules/.bin/pug
 
 # AWS S3 bucket to deploy to
 # TODO: move "pdswebops" to an environment variable that GoCD will pickup 
-S3_BUCKET = s3://ukpds.pugin-website/
+S3_BUCKET = s3://ukpds.pugin-website
 
 
 install:
