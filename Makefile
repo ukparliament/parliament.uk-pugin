@@ -55,8 +55,8 @@ build: css js images templates
 build_prod: lint build
 
 deploytos3: build
-	aws s3 sync --acl=public-read --delete --exclude "./_public/members/*" ./_public/ $(S3_BUCKET)/_public/
-	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
+	aws s3 sync --acl=public-read --delete --exclude "./_public/members/*" ./_public/ $(S3_BUCKET)
+#	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
 test:
 	@mkdir -p $(REPORTS_FOLDER)
