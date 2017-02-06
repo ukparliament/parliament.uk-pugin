@@ -4,16 +4,17 @@
   padding-bottom: $base-spacing-unit-small;
   &__logo {
     display: block;
-    img {
-      background: url('../images/parliament-uk--white-50.png');
-      background-repeat: no-repeat;
+    object {
       width: 268px;
       height: 50px;
       // Mobile View
       @include media($mobile) {
-        background: url('../images/parliament-uk--white-25.png');
         width: 134px;
         height: 25px;
+      }
+      img {
+        height: inherit;
+        width: inherit;
       }
     }
   }
