@@ -4,17 +4,18 @@
   padding-bottom: $base-spacing-unit-small;
   &__logo {
     display: block;
-    background: url('../images/parliament-uk--white-50.png');
-    background-image: url('../images/parliament-uk--white-50.svg'), none;
-    background-repeat: no-repeat;
-    width: 268px;
-    height: 50px;
-    // Mobile View
-    @include media($mobile) {
-      background: url('../images/parliament-uk--white-25.png');
-      background-image: url('../images/parliament-uk--white-25.svg'), none;
-      width: 134px;
-      height: 25px;
+    object {
+      width: 268px;
+      height: 50px;
+      // Mobile View
+      @include media($mobile) {
+        width: 134px;
+        height: 25px;
+      }
+      img {
+        height: inherit;
+        width: inherit;
+      }
     }
   }
 }
