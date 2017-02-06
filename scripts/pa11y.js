@@ -4,34 +4,23 @@
 */
 
 
-/*
-  Require node modules
-*/
+// Require node modules
 const async         = require('async'),
       fs            = require('fs'),
       pa11y         = require('pa11y'),
       htmlReporter  = require('../node_modules/pa11y/reporter/html'),
       config        = require('../config/pa11y.config.js');
 
-/*
-  Create a Pa11y test runner
-*/
+
+// Create a Pa11y test runner
 const test = pa11y({
-  standard: 'WCAG2AA',
-  // ignore WCAG warnings and notices
-  ignore: ['warning', 'notice'],
-	// Log what's happening to the console
-	log: {
-		debug: console.log.bind(console),
-		error: console.error.bind(console),
-		info: console.log.bind(console)
-	}
+  standard: config.standard || 'WCAG2AA', // set test standards
+  ignore: config.ignore, // ignore WCAG msg
+	log: config.log // log what's happening to the console
 });
 
-/*
-  Change the concurrency here to run more tests in parallel
-*/
-const concurrency = 2;
+
+const concurrency = config.concurrency || 10; // set the concurrency here to run more tests in parallel
 
 /*
   Use the async library to create a queue. This accepts a
