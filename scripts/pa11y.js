@@ -14,7 +14,7 @@ const async         = require('async'),
 
 // Create a Pa11y test runner
 const test = pa11y({
-  standard: config.standard || 'WCAG2AA', // set test standards
+  standard: config.standard, // set test standards
   ignore: config.ignore, // ignore WCAG msg
 	log: config.log // log what's happening to the console
 });
