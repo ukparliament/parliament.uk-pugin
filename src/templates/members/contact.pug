@@ -1,5 +1,8 @@
 extends ../../layouts/layout.pug
+
 block content
+  include ../../elements/mixins.pug
+
   // Back Button
   .spacer__vertical-small
     a(href="people-id.html") &lt; Previous Page
@@ -11,17 +14,13 @@ block content
       p= val
 
   // When to contact your MP
-  - sliderLink = 'When to contact your MP'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('When to contact your MP')
     ul
       each val in ['Issues with hospitals and the NHS', 'Immigration issues', 'School closures and grants', 'Data protection']
         li= val
 
   // When to contact your local council
-  - sliderLink = 'When to contact your local council'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('When to contact your local council')
     p Your local council can help with issues with local services such as:
     ul
       each val in ['Council Tax', 'Housing', 'Bins and recycling', 'Street repairs']
@@ -30,38 +29,28 @@ block content
       a(href='#') Find your local council
 
   // When to contact Citizens Advice
-  - sliderLink = 'When to contact Citizens Advice'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('When to contact Citizens Advice')
     p For free, impartial advice on money, legal and customer issues contact #[a(href='#') Citizens Advice]
 
   // When to contact an Ombudsman
-  - sliderLink = 'When to contact an Ombudsman'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('When to contact an Ombudsman')
     p If you have a private dispute with a landlord, employer or company, the #[a(href='#') Ombudsman Association] may be able to help.
 
   // When to contact the Government
-  - sliderLink = 'When to contact the Government'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('When to contact the Government')
     p For government services and information visit #[a(href='#') GOV.UK]
 
   // When to contact your MEP
-  - sliderLink = 'When to contact your MEP'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('When to contact the Government')
     p Your member of European Parliament can help with EU-wide issues such as:
     ul
       each val in ['Employment and working conditions', 'Consumer protection (e.g. roaming charges for mobile phones)', 'Environment standards']
         li= val
 
   // If you live in Scotland, Wales or Northern Ireland
-  - sliderLink = 'If you live in Scotland, Wales or Northern Ireland'
-  include ../../elements/slider-link.pug
-  .slider-content
+  +slider('If you live in Scotland, Wales or Northern Ireland')
     h3 Scotland
-    p Your MSP (Member of the Scottish Parliament) can help you with issues such as health services, education, justice and trasport.
+    p Your MSP (Member of the Scottish Parliament) can help you with issues such as health services, education, justice and transport.
     .spacer__vertical-small
       a(href='#') Find your MSP
 
