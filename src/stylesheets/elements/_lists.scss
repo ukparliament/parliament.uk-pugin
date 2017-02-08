@@ -11,17 +11,15 @@ li {
   margin: 0;
 }
 
+// Non-Media Query Browsers and Tablet dimensions (pixels)
+li {
+  @include fontsize(15, 2);
+}
+
 // Mobile List Item Size (pixels)
 @include media($mobile) {
   li {
     @include fontsize(13, 2);
-  }
-}
-
-// Tablet List Item Size (pixels)
-@include media($tablet) {
-  li {
-    @include fontsize(15, 2);
   }
 }
 
@@ -39,17 +37,15 @@ dl, dt, dd {
   padding: 0;
 }
 
+// Non-Media Query Browsers and Tablet dimensions (pixels)
+dt, dd {
+  @include fontsize(15, 2);
+}
+
 // Mobile Definition List Sizes (pixels)
 @include media($mobile) {
   dt, dd {
     @include fontsize(13, 2);
-  }
-}
-
-// Tablet Definition List Sizes (pixels)
-@include media($tablet) {
-  dt, dd {
-    @include fontsize(15, 2);
   }
 }
 

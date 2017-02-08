@@ -1,14 +1,16 @@
 .result-list {
+  clear: both;
   margin: 0;
   list-style: none;
-  ul {
-    margin: inherit;
-    list-style: inherit;
-  }
   &__item {
-    padding: $base-spacing-unit-tiny 0;
+    padding-top: $base-spacing-unit-tiny;
+    padding-bottom: $base-spacing-unit-tiny;
     border-top: 1px solid $grey-4;
     color: $grey-2;
+    ul {
+      margin: 0;
+      list-style: none;
+    }
     a {
       font-weight: bold;
     }
