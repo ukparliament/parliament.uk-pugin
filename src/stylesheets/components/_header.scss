@@ -3,8 +3,8 @@
   padding-top: $base-spacing-unit-small;
   padding-bottom: $base-spacing-unit-small;
   &__logo {
-    display: block;
     object {
+      display: block;
       width: 268px;
       height: 50px;
       // Mobile View
@@ -13,6 +13,7 @@
         height: 25px;
       }
       img {
+        display: inherit;
         height: inherit;
         width: inherit;
       }
