@@ -8,12 +8,11 @@
   background-color: $grey-5;
   border-top: solid 4px $grey-3;
   &__logo {
-    display: block;
-    background: url('../images/parliament-uk--darkgrey.png');
-    background-image: url('../images/parliament-uk--darkgrey.svg'), none;
-    background-repeat: no-repeat;
-    width: 118px;
-    height: 22px;
+    img {
+      display: block;
+      width: 118px;
+      height: 22px;
+    }
   }
   &__list {
     list-style-type: none;
