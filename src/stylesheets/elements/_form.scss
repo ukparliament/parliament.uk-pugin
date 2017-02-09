@@ -8,9 +8,7 @@ label,
 optgroup,
 select,
 textarea {
-  font-family: $base-font-stack;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+  @include fontsize-test(14, 22);
 }
 
 form {
