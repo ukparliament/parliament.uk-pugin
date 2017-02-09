@@ -1,31 +1,40 @@
 .button-link {
-  display: block;
-  position: relative;
-  padding-top: $base-spacing-unit-small;
-  padding-bottom: $base-spacing-unit-small;
-  padding-left: $base-spacing-unit-small;
-  padding-right: $base-spacing-unit-small;
-  margin-bottom: $base-spacing-unit-small;
-  border: 1px solid $grey-4;
-  @include border-radius($base-spacing-unit-tiny / 2);
-  color: $grey-1;
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus,
-  &:visited {
-    color: $grey-1;
-  }
-  span {
-    display:block;
-    position: absolute;
-    top: calc(50% - 7px);
-    right:12px;
-    height: 14px;
-    width: 10px; // Arrow Left & Right
-    background: url('../images/sprites-arrows.png');
-    background-image: url('../images/sprites-arrows.svg'), none;
-    background-repeat: no-repeat;
-    background-position: 100% 50%; // Arrow Right
+  margin: 0;
+  list-style: none;
+  li {
+    display: block;
+    position: relative;
+    margin-bottom: $base-spacing-unit-small;
+    padding-top: $base-spacing-unit-tiny;
+    padding-bottom: $base-spacing-unit-tiny;
+    padding-left: $base-spacing-unit-small;
+    padding-right: $base-spacing-unit-small;
+    border: 1px solid $grey-4;
+    @include border-radius($base-spacing-unit-tiny / 2);
+    a:link {
+      color: $bright-blue;
+      text-decoration: underline;
+    }
+    a:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+    &:visited {
+      color: $grey-1;
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 16px;
+      top: calc(50% - 7px);
+      right: 12px;
+      height: 14px;
+      width: 10px; // Arrow Left & Right
+      background: url('../images/sprites-arrows.png');
+      background-image: url('../images/sprites-arrows.svg'), none;
+      background-repeat: no-repeat;
+      background-position: 100% 50%; // Arrow Right
+    }
   }
 }
