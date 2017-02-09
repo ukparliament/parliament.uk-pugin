@@ -3,7 +3,7 @@
   padding-top: $base-spacing-unit-small;
   padding-bottom: $base-spacing-unit-small;
   &__logo {
-    object {
+    img {
       display: block;
       width: 268px;
       height: 50px;
@@ -11,11 +11,6 @@
       @include media($mobile) {
         width: 134px;
         height: 25px;
-      }
-      img {
-        display: inherit;
-        height: inherit;
-        width: inherit;
       }
     }
   }
