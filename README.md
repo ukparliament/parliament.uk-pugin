@@ -12,8 +12,7 @@ Static HTML prototypes created by the [Parliamentary Digital Service][pds] for P
 * [Pug-cli] [pug-cli] 1.0.0-alpha6 and above
 
 ```bash
-sudo npm install node -g
-sudo npm install pug-cli -g
+sudo npm install node pug-cli -g
 ```
 
 ## Setup
