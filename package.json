@@ -28,7 +28,6 @@
     "imagemin-cli": "^3.0.0",
     "node-sass": "^4.3.0",
     "postcss-cli": "^2.6.0",
-    "pug-cli": "^1.0.0-alpha6",
     "uglify-js": "^2.7.5"
   },
   "devDependencies": {
