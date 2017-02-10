@@ -1,5 +1,10 @@
-// Sliders
+//- Sliders
 mixin slider(title)
     h2.slider-link= title
     .slider-content
         block
+
+//- Links
+mixin link(href, name)
+  //- Attributes can include rel, target, title and tabindex
+  a(href=href)&attributes(attributes)= name
