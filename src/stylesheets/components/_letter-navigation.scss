@@ -2,11 +2,7 @@
   @include clearfix;
   list-style-type: none;
   margin-top: $base-spacing-unit-small;
-  margin-bottom: $base-spacing-unit;
   margin-left: 0;
-  & > p {
-    padding-bottom: $base-spacing-unit-tiny;
-  }
   & > li {
     display: list-item;
     float: left;

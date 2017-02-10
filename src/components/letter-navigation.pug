@@ -1,7 +1,7 @@
-nav(aria-label='Paged navigation')
-	ul.letter-navigation
-		p Select a letter
-
-		each val, index in ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-			li(data-letter=val, class= (index === 0 ? "active" : undefined))
-				a(data-atoz-see='true', href='#')= val
+.spacer__vertical-small
+  nav(aria-label='Paged navigation')
+    h3 MP’s surnames starting with:
+    ul.letter-navigation
+      each val, index in ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        li(data-letter=val, class= (index === 0 ? "active" : undefined))
+          a(data-atoz-see='true', href='#')= val
