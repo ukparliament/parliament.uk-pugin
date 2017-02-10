@@ -19,7 +19,7 @@ ONCHANGE=./node_modules/.bin/onchange
 PUG=./node_modules/.bin/pug
 
 # AWS S3 bucket to deploy to
-# TODO: move "pdswebops" to an environment variable that GoCD will pickup 
+# TODO: move "pdswebops" to an environment variable that GoCD will pickup
 S3_BUCKET = s3://ukpds.pugin-website
 
 
@@ -62,6 +62,7 @@ test:
 	@mkdir -p $(REPORTS_FOLDER)
 	@rm -rf $(REPORTS_FOLDER)/*
 	@node scripts/pa11y.js
+	@node scripts/w3c.js
 
 watch:
 	@node scripts/watch.js $(STYLESHEETS_LOC)=css $(JAVASCRIPTS_LOC)=js $(IMAGES_LOC)=images $(SRC_FOLDER)/layouts=templates $(SRC_FOLDER)/elements=templates $(SRC_FOLDER)/components=templates $(SRC_FOLDER)/templates=templates

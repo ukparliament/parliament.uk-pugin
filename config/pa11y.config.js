@@ -18,7 +18,6 @@ function getFiles() {
   for (var i = 0; i < files.length; i++) {
     arr.push(filePath + files[i]);
   }
-
   return arr;
 }
 
