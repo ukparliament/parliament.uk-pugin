@@ -5,7 +5,7 @@ block content
 
   // Back Button
   .spacer__vertical-small
-    a(href="people-id.html") &lt; Previous Page
+    | &lt; #[+link('people-id.html', 'Previous Page')]
 
   // Page Title
   h1 Who to contact with your issue
@@ -41,7 +41,7 @@ block content
     p For government services and information visit #[a(href='#') GOV.UK]
 
   // When to contact your MEP
-  +slider('When to contact the Government')
+  +slider('When to contact your MEP')
     p Your member of European Parliament can help with EU-wide issues such as:
     ul
       each val in ['Employment and working conditions', 'Consumer protection (e.g. roaming charges for mobile phones)', 'Environment standards']
@@ -70,7 +70,11 @@ block content
 
 block script
   script(type='text/javascript').
-    document.addEventListener("DOMContentLoaded", function() {
-      // Pass in the class of element you want to activate the content to be shown
-      contentSlider('slider-link');
-    });
+    if (document.addEventListener) {
+      document.addEventListener("DOMContentLoaded", function() {
+        // Pass in the class of element you want to activate the content to be shown
+        contentSlider('slider-link');
+      });
+    } else {
+      document.body.className = 'no-js';
+    }

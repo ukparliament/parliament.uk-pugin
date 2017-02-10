@@ -1,3 +1,4 @@
+// Basic (non js) slider styling
 .slider-link {
   display: block;
   position: relative;
@@ -18,7 +19,7 @@
     border-bottom: 1px solid $grey-4;
   }
 }
-
+// Javascript enabled slider styling
 .has-js {
   .slider-link {
     padding-right: $base-spacing-unit-large;
@@ -29,11 +30,13 @@
     &:focus,
     &:visited {
       cursor: pointer;
+      text-decoration: none;
     }
     & > span.open,
     & > span.close {
       display:block;
       position: absolute;
+      top: 16px;
       top: calc(50% - 7px);
       right:12px;
       height: 14px;
@@ -48,8 +51,5 @@
     & > span.close {
       background-position: 25% 50%; // Arrow Up
     }
-  }
-  .slider-content {
-    display: none;
   }
 }

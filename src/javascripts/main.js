@@ -1,9 +1,10 @@
 (function () {
 
-  // switch 'no-js' to 'has-js' class on body
+  // JAVASCRIPT AVAILABLE
+  // switches 'no-js' to 'has-js' class on body
   document.body.className = 'has-js';
 
-  // content slider
+  // CONTENT SLIDER
   contentSlider = function (val) {
 
     // grab elements append and append class to show arrows
@@ -30,9 +31,13 @@
           evt.target.lastChild.className = 'open';
         }
       }
+
+      evt.preventDefault();
+      return false;
     }
 
-    // click event listener
-    document.addEventListener('click', toggleContent, true);
+    // click and touch event listeners
+    document.addEventListener('click', toggleContent, false);
+    document.addEventListener('touchend', toggleContent, false);
   };
 })();
