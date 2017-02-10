@@ -40,6 +40,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "minimist": "^1.2.0",
     "pa11y": "^4.4.0",
-    "readdir": "0.0.13"
+    "readdir": "0.0.13",
+    "valimate": "^2.3.0"
   }
 }
