@@ -16,7 +16,6 @@
     "url": "https://github.com/ukparliament/parliament.uk-pugin/issues"
   },
   "scripts": {
-    "postinstall": "make build",
     "start": "make server"
   },
   "main": "server.js",
