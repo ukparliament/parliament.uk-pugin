@@ -1,22 +1,21 @@
 {
-  "name": "frontend-prototypes",
-  "version": "1.0.0",
+  "name": "parliamentuk-pugin",
+  "version": "1.1.0",
   "description": "A static build system for UK Parliament prototypes.",
   "author": "UK Parliament",
   "license": "MIT",
   "engines": {
     "node": "7.x"
   },
-  "homepage": "https://github.com/ukparliament/pugin-static#readme",
+  "homepage": "https://github.com/ukparliament/parliament.uk-pugin#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ukparliament/pugin-static.git"
+    "url": "git+https://github.com/ukparliament/parliament.uk-pugin.git"
   },
   "bugs": {
-    "url": "https://github.com/ukparliament/pugin-static/issues"
+    "url": "https://github.com/ukparliament/parliament.uk-pugin/issues"
   },
   "scripts": {
-    "postinstall": "make build",
     "start": "make server"
   },
   "main": "server.js",
