@@ -13,56 +13,57 @@ block content
     each val in ['MPs and Lords can only help with issues that are the responsibility of UK Parliament.', 'Often the right person to contact will be a local councillor, the Citizens’ Advice Bureau or an ombudsman.', 'If you live in Scotland, Wales or Northern Ireland you may need to contact your MSP, AM or MLA.']
       p= val
 
-  // When to contact your MP
-  +slider('When to contact your MP')
-    ul
-      each val in ['Issues with hospitals and the NHS', 'Immigration issues', 'School closures and grants', 'Data protection']
-        li= val
+  .block-slider#block-slider
+    // When to contact your MP
+    +slider('When to contact your MP')
+      ul
+        each val in ['Issues with hospitals and the NHS', 'Immigration issues', 'School closures and grants', 'Data protection']
+          li= val
 
-  // When to contact your local council
-  +slider('When to contact your local council')
-    p Your local council can help with issues with local services such as:
-    ul
-      each val in ['Council Tax', 'Housing', 'Bins and recycling', 'Street repairs']
-        li= val
-    .spacer__vertical-small
-      a(href='#') Find your local council
+    // When to contact your local council
+    +slider('When to contact your local council')
+      p Your local council can help with issues with local services such as:
+      ul
+        each val in ['Council Tax', 'Housing', 'Bins and recycling', 'Street repairs']
+          li= val
+      .spacer__vertical-small
+        a(href='#') Find your local council
 
-  // When to contact Citizens Advice
-  +slider('When to contact Citizens Advice')
-    p For free, impartial advice on money, legal and customer issues contact #[a(href='#') Citizens Advice]
+    // When to contact Citizens Advice
+    +slider('When to contact Citizens Advice')
+      p For free, impartial advice on money, legal and customer issues contact #[a(href='#') Citizens Advice]
 
-  // When to contact an Ombudsman
-  +slider('When to contact an Ombudsman')
-    p If you have a private dispute with a landlord, employer or company, the #[a(href='#') Ombudsman Association] may be able to help.
+    // When to contact an Ombudsman
+    +slider('When to contact an Ombudsman')
+      p If you have a private dispute with a landlord, employer or company, the #[a(href='#') Ombudsman Association] may be able to help.
 
-  // When to contact the Government
-  +slider('When to contact the Government')
-    p For government services and information visit #[a(href='#') GOV.UK]
+    // When to contact the Government
+    +slider('When to contact the Government')
+      p For government services and information visit #[a(href='#') GOV.UK]
 
-  // When to contact your MEP
-  +slider('When to contact your MEP')
-    p Your member of European Parliament can help with EU-wide issues such as:
-    ul
-      each val in ['Employment and working conditions', 'Consumer protection (e.g. roaming charges for mobile phones)', 'Environment standards']
-        li= val
+    // When to contact your MEP
+    +slider('When to contact your MEP')
+      p Your member of European Parliament can help with EU-wide issues such as:
+      ul
+        each val in ['Employment and working conditions', 'Consumer protection (e.g. roaming charges for mobile phones)', 'Environment standards']
+          li= val
 
-  // If you live in Scotland, Wales or Northern Ireland
-  +slider('If you live in Scotland, Wales or Northern Ireland')
-    h3 Scotland
-    p Your MSP (Member of the Scottish Parliament) can help you with issues such as health services, education, justice and transport.
-    .spacer__vertical-small
-      a(href='#') Find your MSP
+    // If you live in Scotland, Wales or Northern Ireland
+    +slider('If you live in Scotland, Wales or Northern Ireland')
+      h3 Scotland
+      p Your MSP (Member of the Scottish Parliament) can help you with issues such as health services, education, justice and transport.
+      .spacer__vertical-small
+        a(href='#') Find your MSP
 
-    h3 Wales
-    p AMs (Welsh Assembly Members) can help you with issues such as social welfare, fire and rescue services, flood defences and rural development.
-    .spacer__vertical-small
-      a(href='#') Find your AM
+      h3 Wales
+      p AMs (Welsh Assembly Members) can help you with issues such as social welfare, fire and rescue services, flood defences and rural development.
+      .spacer__vertical-small
+        a(href='#') Find your AM
 
-    h3 Northern Ireland
-    p MLAs (Members of the Legislative Assembly) can help you with issues such as policing and justice, social care, tourism and trade and investment.
-    .spacer__vertical-small
-      a(href='#') Find your MLA
+      h3 Northern Ireland
+      p MLAs (Members of the Legislative Assembly) can help you with issues such as policing and justice, social care, tourism and trade and investment.
+      .spacer__vertical-small
+        a(href='#') Find your MLA
 
   // Back to Top Button
   .spacer__vertical-medium
@@ -72,8 +73,8 @@ block script
   script(type='text/javascript').
     if (document.addEventListener) {
       document.addEventListener("DOMContentLoaded", function() {
-        // Pass in the class of element you want to activate the content to be shown
-        contentSlider('slider-link');
+        // Pass in id of slider's container followed by class name of element(s) you want as slider trigger(s)
+        contentSlider('block-slider', 'slider-link');
       });
     } else {
       document.body.className = 'no-js';
