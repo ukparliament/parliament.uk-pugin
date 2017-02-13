@@ -1,4 +1,6 @@
 .PHONY: install clean serve build
+# When run in gocd it will be injected by environment variable
+AWS_ACCOUNT?=unknown
 
 # Common variables
 SRC_FOLDER=src
