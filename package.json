@@ -16,7 +16,7 @@
     "url": "https://github.com/ukparliament/parliament.uk-pugin/issues"
   },
   "scripts": {
-    "start": "make server"
+    "start": "make heroku"
   },
   "main": "server.js",
   "dependencies": {
