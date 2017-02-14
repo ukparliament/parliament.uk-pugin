@@ -6,26 +6,21 @@ Static HTML prototypes created by the [Parliamentary Digital Service][pds] for P
 > **NOTE:** This is currently in active development and will change at short notice. It is not production ready.
 
 ## Requirements
-[frontend-prototypes][frontend-prototypes] requires the following:
+[parliament.uk-pugin][parliament.uk-pugin] requires the following:
 
-* [Nodejs][nodejs] 6.0.0 and above
-* [Pug-cli] [pug-cli] 1.0.0-alpha6 and above
-
-```bash
-sudo npm install node pug-cli -g
-```
+* [NodeJS][nodejs] 6.0.0 and above
 
 ## Setup
 To install, clone from GitHub and `npm install` in the cloned directory:
 
 ```bash
-git clone https://github.com/ukparliament/frontend-prototypes.git
-cd frontend-prototypes
+git clone https://github.com/ukparliament/parliament.uk-pugin.git
+cd parliament.uk-pugin
 npm install
 ```
 
 ## Usage
-*@todo*
+After setting up, run `make serve`.
 
 ## Contributing
 If you wish to submit a bug fix or feature, you can create a pull request and it will be merged pending a code review.
@@ -37,13 +32,13 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 1. Create a new Pull Request
 
 ## License
-[frontend-prototypes][frontend-prototypes] is licensed under the [Open Parliament Licence][info-license].
+[parliament.uk-pugin][parliament.uk-pugin] is licensed under the [Open Parliament Licence][info-license].
 
-[nodejs]:          		http://nodejs.org
-[pug-cli]:         		https://github.com/pugjs/pug-cli
+[nodejs]:          		  http://nodejs.org
+[pug-cli]:         		  https://github.com/pugjs/pug-cli
 
-[frontend-prototypes]:  https://github.com/ukparliament/frontend-prototypes
-[pds]:             		https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/
+[parliament.uk-pugin]:  https://github.com/ukparliament/parliament.uk-pugin
+[pds]:             		  https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/
 
-[info-license]:    		http://www.parliament.uk/site-information/copyright/open-parliament-licence/
-[shield-license]:  		https://img.shields.io/badge/license-Open%20Parliament%20Licence-blue.svg
+[info-license]:    	  	http://www.parliament.uk/site-information/copyright/open-parliament-licence/
+[shield-license]:  		  https://img.shields.io/badge/license-Open%20Parliament%20Licence-blue.svg
