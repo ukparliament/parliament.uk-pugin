@@ -67,6 +67,6 @@ test:
 watch:
 	@node scripts/watch.js $(STYLESHEETS_LOC)=css $(JAVASCRIPTS_LOC)=js $(IMAGES_LOC)=images $(SRC_FOLDER)/layouts=templates $(SRC_FOLDER)/elements=templates $(SRC_FOLDER)/components=templates $(SRC_FOLDER)/templates=templates
 
-server:
+heroku: build
 	@cp index.html $(PUBLIC_FOLDER) || :
 	@node server.js
