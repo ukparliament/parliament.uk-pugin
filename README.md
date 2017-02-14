@@ -20,7 +20,7 @@ npm install
 ```
 
 ## Usage
-After setting up, run `make serve`.
+After setting up, run `make serve`. Browse to http://localhost:3000 to view the prototype.
 
 ## Contributing
 If you wish to submit a bug fix or feature, you can create a pull request and it will be merged pending a code review.
