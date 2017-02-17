@@ -18,7 +18,7 @@
 // Import objects
 @import 'objects/grid-settings';
 @import 'objects/grid-layouts';
-@import 'objects/content-layouts';
+@import 'objects/block-layouts';
 
 // Import bare-bones elements
 @import 'elements/body';
@@ -30,17 +30,15 @@
 @import 'elements/typography';
 
 // Import site-wide components
-@import 'components/block-content';
-@import 'components/contact-list';
+@import 'components/border';
 @import 'components/content-slider';
 @import 'components/footer';
 @import 'components/header';
-@import 'components/button-link';
-@import 'components/letter-navigation';
-@import 'components/status';
-@import 'components/result-list';
 @import 'components/highlight-box';
-@import 'components/border';
+@import 'components/highlight-status';
+@import 'components/link-button';
+@import 'components/list-styles';
+@import 'components/navigation-letter';
 
 // Import Trumps
 @import 'trumps/helpers';

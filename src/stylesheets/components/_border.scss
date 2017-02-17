@@ -1,12 +1,18 @@
 .bordered {
-  border-bottom: 4px solid;
-  border-color: $grey-3;
+  margin-bottom: $base-spacing-unit-tiny;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: $grey-3;
   &-lords {
-    border-bottom: 4px solid;
-    border-color: $lords-red;
+    margin-bottom: $base-spacing-unit-tiny;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: $lords-red;
   }
   &-commons {
-    border-bottom: 4px solid;
-    border-color: $commons-green;
+    margin-bottom: $base-spacing-unit-tiny;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: $commons-green;
   }
 }

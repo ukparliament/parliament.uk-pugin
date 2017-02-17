@@ -13,10 +13,14 @@ th, td {
 
 thead th, tfoot td {
   background-color: $grey-5;
-  border: solid 1px $grey-4;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey-4;
   text-align: left;
 }
 
 td {
-  border: solid 1px $grey-4;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey-4;
 }

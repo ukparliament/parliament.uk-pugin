@@ -6,7 +6,9 @@
   padding-top: $base-spacing-unit-small;
   padding-bottom: $base-spacing-unit-small;
   background-color: $grey-5;
-  border-top: solid 4px $grey-3;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: $grey-3;
   &__logo {
     img {
       display: block;
@@ -15,14 +17,20 @@
     }
   }
   &__list {
-    list-style-type: none;
-    margin-top: $base-spacing-unit-tiny;
+    list-style: none;
+    margin-top: $base-spacing-unit-small;
     margin-left: 0;
+    & > li {
+      padding-bottom: $base-spacing-unit-tiny;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
   }
 }
-
+// Physical Print Styles
 @media print {
-  .ftr {
+  .footer {
     display: none;
   }
 }
