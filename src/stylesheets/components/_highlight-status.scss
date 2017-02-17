@@ -1,0 +1,13 @@
+.highlight__status {
+  @extend .block;
+  background-color: $bright-blue;
+  color: white;
+  a {
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: white;
+    }
+  }
+}

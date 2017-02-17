@@ -18,6 +18,6 @@ Basic layouts can be declared and updated in the `objects/grid-layouts.scss` fil
 
 1. Containers/wrapper classes use the **c** prefix for 'container'. Container variations are declared by appending **-** and a **2** character identifier to **c**. For example **.c-fs** represents 'container full screen' and stretches an empty container div across the full viewport.
 
-2. Row classes use the **row** identifier for a 'row'. If required, row variations can be declared by appending **-** and a **2** character identifier to **r** (e.g. **row-ab** ).
+2. Row classes use the **row** identifier for a 'row'. If required, row variations can be declared by appending **__** and a string identifier to **row** (e.g. **row__indent** ).
 
-3. Column combination classes use the **l** prefix for 'layout'. Column layout variations are declared by appending **-** and a character **or** numeric identifier to **l** depending on what you need. For example **.l-4** represents a layout block with 4 columns in it.
+3. All components and elements (apart from headings) should be wrapped in an initial **block** div container which sets the display property and applies consistent vertical padding. The contents of the block container can then be manipulated as desired, independently of all other components, elements and main layout.
