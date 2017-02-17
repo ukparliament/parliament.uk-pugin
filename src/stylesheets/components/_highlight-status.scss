@@ -2,7 +2,10 @@
   @extend .block;
   background-color: $bright-blue;
   color: white;
+
   a {
+    color: white;
+
     &:hover,
     &:active,
     &:focus,
