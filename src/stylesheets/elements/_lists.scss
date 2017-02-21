@@ -1,0 +1,57 @@
+// ORDERED & UNORDERED LISTS
+// Variables inherited from 'settings/_spacing.scss'
+
+ul, ol {
+  margin: 0 0 0 $base-spacing-unit-small;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+// Non-Media Query Browsers and Tablet dimensions (pixels)
+li {
+  @include fontsize(14, 22);
+}
+
+// Mobile List Item Size (pixels)
+@include media($mobile) {
+  li {
+    @include fontsize(14, 22);
+  }
+}
+
+// Desktop List Item Size (pixels)
+@include media($desktop) {
+  li {
+    @include fontsize(16, 28);
+  }
+}
+
+// DEFINITION LISTS
+
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+// Non-Media Query Browsers and Tablet dimensions (pixels)
+dt, dd {
+  @include fontsize(14, 22);
+}
+
+// Mobile Definition List Sizes (pixels)
+@include media($mobile) {
+  dt, dd {
+    @include fontsize(14, 22);
+  }
+}
+
+// Desktop Definition List Sizes (pixels)
+@include media($desktop) {
+  dt, dd {
+    @include fontsize(16, 24);
+  }
+}

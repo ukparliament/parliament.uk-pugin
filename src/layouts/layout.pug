@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title Parliamentary Digital Service
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="../../_public/stylesheets/main.css")
+    link(rel="favicon", type="image/x-icon", href="../../_public/images/favicon.ico")
+  body.no-js
+    include ../elements/mixins.pug
+    include ../elements/skip-content.pug
+    +link()(id='top')
+    include ../components/header.pug
+    include ../components/status.pug
+    main(id="content")
+      .c-fg
+        .row--indent-full
+          block content
+    include ../components/footer.pug
+    script(src="../../_public/javascripts/main.js")
+    block script

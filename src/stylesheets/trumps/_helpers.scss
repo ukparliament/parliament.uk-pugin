@@ -1,0 +1,20 @@
+//Clear Fix can be applied to any class by adding `@include clearfix`
+
+.visually-hidden {
+  visibility: hidden;
+}
+.sr-only {
+	@include screenreader;
+}
+.sr-only--focusable {
+	&:focus, &:active {
+		margin: 0;
+		clip: auto;
+    	width: auto;
+    	height: auto;
+    	color: $white;
+    	overflow: visible;
+    	background-color: $black;
+    	padding: $base-spacing-unit-tiny;
+	}
+}

@@ -1,0 +1,23 @@
+extends ../../layouts/layout.pug
+block content
+  //- Back Button
+  .block
+    p &lt; #[+link('party-current.html', 'Previous page')]
+  //- Page Title
+  h1 Current Conservative members of Parliament
+  //- Summary
+  .block
+    p There are 582 Members in the #[+link('#', 'Conservative Party')]
+  //- Letter Navigation
+  include ../../components/letter-navigation.pug
+  //- Result List
+  ol.list
+    each object in [{name: 'Nigel Adams', constituency: 'MP for Selby & Ainsty', party: 'Conservative'},{name: 'Adam Afriyie', constituency: 'MP for Windsor', party: 'Conservative'},{name: 'Peter Aldous', constituency: 'MP for Waveney', party: 'Conservative'},{name: 'Lucy Allan', constituency: 'MP for Telford', party: 'Conservative'},{name: 'Heidi Allen', constituency: 'MP for South Cambridgeshire', party: 'Conservative'}]
+      li.list--item
+        ul.list
+          li #[+link('#', object.name)]
+          li= object.constituency
+          li= object.party
+          //- Back to Top
+  .block
+    p #[+link('#top', 'Back to the top')]

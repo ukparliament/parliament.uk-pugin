@@ -1,0 +1,23 @@
+.header {
+  background-color: $grey-1;
+  padding-top: $base-spacing-unit-small;
+  padding-bottom: $base-spacing-unit-small;
+  &__logo {
+    img {
+      display: block;
+      width: 268px;
+      height: 50px;
+      // Mobile View
+      @include media($mobile) {
+        width: 134px;
+        height: 25px;
+      }
+    }
+  }
+}
+// Physical Print Styles
+@media print {
+  .header {
+    display: none;
+  }
+}

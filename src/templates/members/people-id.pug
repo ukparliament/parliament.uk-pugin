@@ -1,0 +1,36 @@
+extends ../../layouts/layout.pug
+block content
+  //- Back Button
+  .block
+    p &lt; #[+link('house-commons-members-current.html', 'MPs and Lords')]
+  //- Profile Card
+  h1 Diane Abbott
+  .block
+    p MP for #[+link('#', 'Hackney North and Stoke Newington')]
+    p #[+link('#', 'Labour')]
+  //- Representative Information
+  .block
+    .highlight__box
+      p Your MP is your representative in Parliament and can help with issues that are the responsiblity of UK Parliament.
+      p #[+link('contact.html', 'Find out who to contact with your issue')]
+  //- Contact Details
+  h2.bordered Contact Details
+  dl.list__definition
+    dt Email:
+    dd #[+link('mailto:ayo.sanusi@parliament.uk', 'ayo.sanusi@parliament.uk')]
+    dt Phone:
+    dd #[+link('tel:02072194426', '020 7219 4426')]
+    dt Address:
+    dd House of Commons, London, SW1A 0AA
+  //- Election History
+  h2.bordered Election History
+  ol.list
+    each object in [{constituency: 'Hackney North and Stoke Newington', sitting_duration: '2015 - Current', party: "Labour"},{constituency: 'Hackney North and Stoke Newington', sitting_duration: '1987 - 2015', party: 'Labour'}]
+      li.list--item
+        ul.list
+          li MP for #[+link('#', object.constituency)]
+          li=object.sitting_duration
+          li #[+link('#', object.party)]
+  //- Back to Top
+  .block
+    p #[+link('#top', 'Back to the top')]

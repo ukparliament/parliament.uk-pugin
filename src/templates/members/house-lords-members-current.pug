@@ -1,0 +1,19 @@
+extends ../../layouts/layout.pug
+block content
+  //- Back Button
+  .block
+    p &lt; #[+link('people-members-current.html', 'Previous page')]
+  //- Page Title
+  h1.bordered-lords Lords
+  //- Letter Navigation
+  include ../../components/letter-navigation.pug
+  //- Result List
+  ol.list
+    each object in [{name: 'Lord Aberdare', party: 'Crossbench'},{name: 'Baroness Adams of Craigielea', party: 'Labour'},{name: 'Lord Addington', party: 'Liberal Democrats'},{name: 'Lord Adebowale', party: 'Crossbench'},{name: 'Lord Adonis', party: 'Non-affiliated'}]
+      li.list--item
+        ul.list
+          li #[+link('#', object.name)]
+          li= object.party
+  //- Back to Top
+  .block
+    p #[+link('#top', 'Back to the top')]

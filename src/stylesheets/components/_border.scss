@@ -1,0 +1,18 @@
+.bordered {
+  margin-bottom: $base-spacing-unit-tiny;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: $grey-3;
+  &-lords {
+    margin-bottom: $base-spacing-unit-tiny;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: $lords-red;
+  }
+  &-commons {
+    margin-bottom: $base-spacing-unit-tiny;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: $commons-green;
+  }
+}
