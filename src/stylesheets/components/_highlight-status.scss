@@ -2,15 +2,17 @@
   @extend .block;
   background-color: $bright-blue;
   color: white;
-
   a {
-    color: white;
-
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: underline;
+    }
     &:hover,
     &:active,
-    &:focus,
-    &:visited {
-      color: white;
+    &:focus {
+      color: $white;
+      text-decoration: none;
     }
   }
 }
