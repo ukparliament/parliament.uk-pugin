@@ -1,12 +1,13 @@
 .bordered {
-  border-bottom: 4px solid;
-  border-color: $grey-3;
-  &-lords {
-    border-bottom: 4px solid;
-    border-color: $lords-red;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: $grey-3;
+  &--lords {
+    @extend .bordered;
+    border-bottom-color: $lords-red;
   }
-  &-commons {
-    border-bottom: 4px solid;
-    border-color: $commons-green;
+  &--commons {
+    @extend .bordered;
+    border-bottom-color: $commons-green;
   }
 }

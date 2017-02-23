@@ -1,0 +1,18 @@
+.highlight__status {
+  @extend .block;
+  background-color: $bright-blue;
+  color: white;
+  a {
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: underline;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

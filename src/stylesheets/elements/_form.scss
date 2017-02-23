@@ -8,7 +8,7 @@ label,
 optgroup,
 select,
 textarea {
-  @include fontsize-test(14, 22);
+  @include fontsize(14, 22);
 }
 
 form {
@@ -42,14 +42,18 @@ label {
 input[type="text"],
 input[type="password"],
 textarea {
-  border: solid 2px $black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $black;
   display: block;
   padding: ($base-spacing-unit-tiny - 2);
   width: 50%;
 }
 
 select {
-  border: solid 1px $black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $black;
   padding: ($base-spacing-unit-tiny - 4);
   width: 50%;
 }
@@ -61,9 +65,14 @@ textarea {
 button,
 input[type="reset"],
 input[type="submit"] {
-  border: solid 1px $black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $black;
   font-weight: 600;
-  padding: $base-spacing-unit-small ($base-spacing-unit - 8);
+  padding-top: $base-spacing-unit-small;
+  padding-bottom: $base-spacing-unit-small;
+  padding-left: ($base-spacing-unit - 8);
+  padding-right: ($base-spacing-unit - 8);
 }
 
 

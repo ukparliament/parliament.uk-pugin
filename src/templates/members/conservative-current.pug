@@ -1,25 +1,23 @@
 extends ../../layouts/layout.pug
 block content
-  // Back Button
-  .spacer__vertical-small
-    a(href='party-current.html') &lt; Previous page
-  // Page Title
+  //- Back Button
+  .block
+    p &lt; #[+link('party-current.html', 'Previous page')]
+  //- Page Title
   h1 Current Conservative members of Parliament
-  // Summary
-  .spacer__vertical-small
-    strong
-      | There are 582 Members in the #[a(href='#') Conservative Party]
-  // Letter Navigation
+  //- Summary
+  .block
+    p There are 582 Members in the #[+link('#', 'Conservative Party')]
+  //- Letter Navigation
   include ../../components/letter-navigation.pug
-  // Result List
-  ol.result-list
+  //- Result List
+  ol.list
     each object in [{name: 'Nigel Adams', constituency: 'MP for Selby & Ainsty', party: 'Conservative'},{name: 'Adam Afriyie', constituency: 'MP for Windsor', party: 'Conservative'},{name: 'Peter Aldous', constituency: 'MP for Waveney', party: 'Conservative'},{name: 'Lucy Allan', constituency: 'MP for Telford', party: 'Conservative'},{name: 'Heidi Allen', constituency: 'MP for South Cambridgeshire', party: 'Conservative'}]
-      li.result-list__item
+      li.list__item
         ul
-          li
-            a(href="#")= object.name
+          li #[+link('#', object.name)]
           li= object.constituency
           li= object.party
-  // Back to Top Button
-  .spacer__vertical-medium
-    a(href='#top') Back to the top
+          //- Back to Top
+  .block
+    p #[+link('#top', 'Back to the top')]

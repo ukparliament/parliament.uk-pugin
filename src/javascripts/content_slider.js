@@ -1,10 +1,5 @@
 (function () {
 
-  // JAVASCRIPT AVAILABILITY
-
-  // switches 'no-js' to 'has-js' class on body
-  document.body.className = 'has-js';
-
   // CONTENT SLIDER
   contentSlider = function (ids, cls) {
 
@@ -38,12 +33,12 @@
     // toggle content function
     function toggleContent(evt) {
       if (evt.target && evt.target.className === cls) {
-        var cnt = evt.target.nextElementSibling;
-        if (cnt.style.display == 'none') {
-          cnt.style.display = 'block';
+        var content = evt.target.nextElementSibling;
+        if (content.style.display == 'none') {
+          content.style.display = 'block';
           evt.target.lastChild.className = 'close';
         } else {
-          cnt.style.display = 'none';
+          content.style.display = 'none';
           evt.target.lastChild.className = 'open';
         }
       }
