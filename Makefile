@@ -54,8 +54,9 @@ templates:
 build: css js images templates
 build_prod: lint build
 
+REL=$(shell curl -s https://api.github.com/repos/ukparliament/parliament.uk-pugin/releases/latest  | jq -r '.tag_name')
 deploytos3: build
-	aws s3 sync --acl=public-read --delete --exclude "members/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website
+	aws s3 sync --acl=public-read --delete --exclude "members/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL)
 #	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
 test:
