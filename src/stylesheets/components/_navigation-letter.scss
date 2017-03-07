@@ -32,13 +32,19 @@
       color: $black;
       text-decoration: none;
     }
+    & > a:hover,
+    & > a:active,
+    & > a:focus {
+      background-color: $grey-1;
+      outline-color: $grey-1;
+      color: $white;
+    }
     @include media($desktop) {
       width: 43px;
       line-height: ($base-spacing-unit-large - 10);
     }
   }
-  & li:hover > a,
-    li.active > a {
+  & li.active > a {
     background-color: $grey-1;
     outline-color: $grey-1;
     color: $white;
