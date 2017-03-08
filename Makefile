@@ -1,4 +1,5 @@
 .PHONY: install clean serve build
+
 # When run in gocd it will be injected by environment variable
 AWS_ACCOUNT?=unknown
 
@@ -20,8 +21,13 @@ BROWSER_SYNC=./node_modules/.bin/browser-sync
 ONCHANGE=./node_modules/.bin/onchange
 PUG=./node_modules/.bin/pug
 
-# AWS S3 bucket to deploy to
-# TODO: move "pdswebops" to an environment variable that GoCD will pickup
+# Github variables
+GITHUB_API=https://api.github.com
+ORG=ukparliament
+REPO=parliament.uk-pugin
+LATEST_REL=$(GITHUB_API)/repos/$(ORG)/$(REPO)/releases/latest
+REL_TAG=$(shell curl -s $(LATEST_REL) | jq -r '.tag_name')
+
 
 install:
 	@npm i
@@ -54,9 +60,8 @@ templates:
 build: css js images templates
 build_prod: lint build
 
-REL=$(shell curl -s https://api.github.com/repos/ukparliament/parliament.uk-pugin/releases/latest  | jq -r '.tag_name')
 deploytos3: build
-	aws s3 sync --acl=public-read --delete --exclude "members/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL)
+	aws s3 sync --acl=public-read --delete --exclude "members/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
 #	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
 test:
