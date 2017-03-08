@@ -61,7 +61,7 @@ build: css js images templates
 build_prod: lint build
 
 deploytos3: build
-	aws s3 sync --acl=public-read --delete --exclude "members/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
+	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
 #	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
 test:
