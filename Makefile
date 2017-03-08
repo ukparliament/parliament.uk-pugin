@@ -10,7 +10,6 @@ JAVASCRIPTS_LOC=src/javascripts
 STYLESHEETS_LOC=src/stylesheets
 IMAGES_LOC=src/images
 REPORTS_FOLDER=reports
-PUGIN=parliament.uk-pugin
 
 # Node module variables
 ESLINT=./node_modules/.bin/eslint
@@ -24,8 +23,9 @@ PUG=./node_modules/.bin/pug
 
 # Github variables
 GITHUB_API=https://api.github.com
-REPO=ukparliament
-LATEST_REL=$(GITHUB_API)/repos/$(REPO)/$(PUGIN)/releases/latest
+ORG=ukparliament
+REPO=parliament.uk-pugin
+LATEST_REL=$(GITHUB_API)/repos/$(ORG)/$(REPO)/releases/latest
 REL_TAG=$(shell curl -s $(LATEST_REL) | jq -r '.tag_name')
 
 
