@@ -59,8 +59,13 @@ templates:
 
 build: css js images templates
 build_prod: lint build
+checkout_release: 
+	git checkout -b release $(REL_TAG)
 
-deploytos3: build
+build_cdp: checkout_release build
+
+
+deploytos3: build_cdp
 	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
 #	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
