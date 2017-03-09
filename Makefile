@@ -32,6 +32,10 @@ REL_TAG=$(shell curl -s $(LATEST_REL) | jq -r '.tag_name')
 install:
 	@npm i
 
+install_release: 
+	git checkout -b release $(REL_TAG)
+	@npm i
+
 clean:
 	@rm -rf $(PUBLIC_FOLDER)
 
@@ -58,9 +62,10 @@ templates:
 	@$(BROWSER_SYNC) reload --files "$(PUBLIC_FOLDER)/templates/*.html"
 
 build: css js images templates
+
 build_prod: lint build
 
-deploytos3: build
+deploy:
 	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
 #	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
