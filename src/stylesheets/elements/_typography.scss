@@ -47,6 +47,9 @@ p,a {
 .lead {
   @include fontsize(21, 33);
 }
+.lead > a {
+  @include fontsize(21, 33);
+}
 
 // Mobile Typography Settings (pixels)
 @include media($mobile) {
@@ -72,6 +75,9 @@ p,a {
     @include fontsize(16, 25);
   }
   .lead {
+    @include fontsize(18, 27);
+  }
+  .lead > a {
     @include fontsize(18, 27);
   }
 }
@@ -100,6 +106,9 @@ p,a {
     @include fontsize(18, 30);
   }
   .lead {
+    @include fontsize(21, 33);
+  }
+  .lead > a {
     @include fontsize(21, 33);
   }
 }
