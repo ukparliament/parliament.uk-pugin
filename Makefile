@@ -1,4 +1,4 @@
-.PHONY: install clean serve build
+.PHONY: install install_to_release clean serve build build_prod test
 
 # When run in gocd it will be injected by environment variable
 AWS_ACCOUNT?=unknown
@@ -32,7 +32,7 @@ REL_TAG=$(shell curl -s $(LATEST_REL) | jq -r '.tag_name')
 install:
 	@npm i
 
-install_release: 
+install_to_release: 
 	git checkout -b release $(REL_TAG)
 	@npm i
 
@@ -65,7 +65,10 @@ build: css js images templates
 
 build_prod: lint build
 
-deploy:
+deploy_continuously:
+	aws s3 sync --acl=public-read --delete ./_public/ s3://$(AWS_ACCOUNT).pugin-prototypes
+
+deploy_to_release:
 	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
 #	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
