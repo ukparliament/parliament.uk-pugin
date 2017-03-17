@@ -1,4 +1,4 @@
-.PHONY: install install_to_release clean serve build
+.PHONY: install install_to_release clean serve build build_prod test
 
 # When run in gocd it will be injected by environment variable
 AWS_ACCOUNT?=unknown
