@@ -65,12 +65,14 @@ build: css js images templates
 
 build_prod: lint build
 
-deploy_continuously:
-	aws s3 sync --acl=public-read --delete ./_public/ s3://$(AWS_ACCOUNT).pugin-prototypes
+deploy:
+	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website
+
+deploy_prototypes:
+	aws s3 sync --acl=public-read --delete ./_public/ s3://$(AWS_ACCOUNT).pugin-website/prototypes/
 
 deploy_to_release:
 	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
-#	aws s3 cp --acl=public-read ./index.html $(S3_BUCKET)
 
 test:
 	@mkdir -p $(REPORTS_FOLDER)
