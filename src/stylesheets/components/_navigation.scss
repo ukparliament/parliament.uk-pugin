@@ -10,15 +10,14 @@
     margin-top: 0;
     margin-bottom: 5px;
     margin-left: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0 5.7px;
     text-transform: uppercase;
-    width: 11.11111111111%;
+    //width: 11.11111111111%;
     &:last-child {
       margin-right: 0;
     }
     @include media($desktop) {
-      width: 3.84615384615%;
+      //width: 3.84615384615%;
     }
   }
   & li.active > a {
