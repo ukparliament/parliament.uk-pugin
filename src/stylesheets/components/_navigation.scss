@@ -17,8 +17,6 @@
 	);
 
 	li {
-		padding: 0 $base-spacing-unit-small;
-
 		&:first-child {
 			padding-left: 0;
 		}
@@ -50,9 +48,16 @@
 
 
 @include media($desktop) {
+  .navigation--main {
+    li {
+      padding: 0 $base-spacing-unit-small;
+    }
+  }
+
   .navigation--number {
     text-align: center;
   }
+
 	.navigation-control--right {
 		@include navigation-control(right, $base-spacing-unit-small, 0);
 	}
