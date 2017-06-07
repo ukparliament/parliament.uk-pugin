@@ -5,7 +5,11 @@ block content
       .section--primary__container
         .section--primary__block
           //- Page Title
-          h1 Current Conservative
+          h1
+            span Conservative MPs and Lords
+            +link('#', '- :startdate - :enddate parliament')
+            span.lead A to Z
+
 
       .section--primary__container
         .section--primary__block
