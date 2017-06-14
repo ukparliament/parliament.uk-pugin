@@ -1,36 +1,56 @@
 // Adds 'loading icon' to button with id of 'btn__loading' when clicked
 
 (function () {
-	var btnLoad;
-	var input;
+	var btnLoad,
+			input,
+			form,
+			userAgent;
 
-	// Grab elements with id of btn__loading
+	// Grab element with id of btn__loading
 	btnLoad = document.getElementById('btn_loading');
 
-	// Grab elements with id of search_box
+	// Grab element with id of search_box
 	input = document.getElementById('input');
 
-	// Only create the event listener if the element exists within DOM
-	if (btnLoad) {
-		// Create event listener for 'return' keydown and send it as click event
-		btnLoad.addEventListener('keydown', function (event) {
-			if (event.keyCode === 13) {
-				event.target.click();
-			}
-		}, false);
+	// Grab element with id of pcSearch
+	form = document.getElementById('postcodeSearch');
 
-		// Create click event listener
-		btnLoad.addEventListener('click', btnState, false);
+	// Get the user agent
+	userAgent = window.navigator.userAgent;
+
+	// Only create the event listener if the element exists within DOM
+	if (form) {
+		// bfcache fix
+		window.addEventListener('pageshow', function (event) {
+			if (event.persisted && btnLoad.classList.contains('btn--loading')) {
+				btnLoad.classList.remove('btn--loading')
+			}
+		});
+		// Event listener for form submit
+		form.addEventListener('submit', frmState, false);
 	}
 
-	function btnState() {
-		// If HTML5 attribute validation passes
-		if (input.checkValidity() === true) {
+
+	function frmState(event) {
+		if (input.checkValidity() == true) {
+
+			if (userAgent.match(/Safari/)) {
+				// Prevent form submission
+				event.preventDefault();
+			}
+
 			// Add btn--loading class to button
-			//this.classList.add('btn--loading');
+			btnLoad.classList.add('btn--loading');
 
 			// Change aria-pressed to the opposite state
-			this.setAttribute('aria-pressed', true);
+			btnLoad.setAttribute('aria-pressed', true);
+
+			if (userAgent.match(/Safari/)) {
+				// Resume form submission after 'x' ms
+				setTimeout(function() {
+					form.submit();
+				}, 100);
+			}
 		}
 	}
 })();

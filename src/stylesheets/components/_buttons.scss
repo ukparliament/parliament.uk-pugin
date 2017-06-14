@@ -27,6 +27,15 @@
 .btn--loading {
   cursor: not-allowed;
 
+  @-webkit-keyframes spinner {
+    from {
+      -webkit-transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
   @keyframes spinner {
     from {
       transform: rotate(0);
