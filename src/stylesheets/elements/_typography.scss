@@ -23,14 +23,14 @@ p {
 header {
 	@include fontsize(36);
 	line-height: 1.167; // 42px
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .column--25 {
 	p {
 		@include fontsize(27);
 		line-height: 1.111; // 30px;
-		font-weight: bold;
+		font-weight: 500;
 		@include media($desktop) {
 			@include fontsize(32);
 			line-height: 1.125; // 36px
@@ -38,7 +38,7 @@ header {
 		span {
 			@include fontsize(16);
 			line-height: 1.125; // 18px;
-			font-weight: normal;
+			font-weight: 400;
 
 			@include media($desktop) {
 				@include fontsize(18);
