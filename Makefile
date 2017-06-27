@@ -14,7 +14,6 @@ REPORTS_FOLDER=reports
 # Node module variables
 ESLINT=./node_modules/.bin/eslint
 IMAGEMIN=./node_modules/.bin/imagemin
-ONCHANGE=./node_modules/.bin/onchange
 NODE_SASS=./node_modules/.bin/node-sass
 POSTCSS=./node_modules/.bin/postcss
 PUG=./node_modules/.bin/pug
@@ -50,7 +49,7 @@ css:
 # Minifies javascript files
 js:
 	@mkdir -p $(PUBLIC_FOLDER)/javascripts
-	@$(UGLIFY_JS) $(JAVASCRIPTS_LOC)/*.js -m -o $(PUBLIC_FOLDER)/javascripts/main.js
+	@$(UGLIFY_JS) $(JAVASCRIPTS_LOC)/*.js -m -o $(PUBLIC_FOLDER)/javascripts/main.js --timings
 
 # Minifies images
 images:
