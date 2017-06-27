@@ -14,7 +14,6 @@ REPORTS_FOLDER=reports
 # Node module variables
 ESLINT=./node_modules/.bin/eslint
 IMAGEMIN=./node_modules/.bin/imagemin
-ONCHANGE=./node_modules/.bin/onchange
 NODE_SASS=./node_modules/.bin/node-sass
 POSTCSS=./node_modules/.bin/postcss
 PUG=./node_modules/.bin/pug
@@ -45,7 +44,7 @@ clean:
 css:
 	@mkdir -p $(PUBLIC_FOLDER)/stylesheets
 	@$(NODE_SASS) --output-style compressed -o $(PUBLIC_FOLDER)/stylesheets $(STYLESHEETS_LOC)
-	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/*
+	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/* -x
 
 # Minifies javascript files
 js:
