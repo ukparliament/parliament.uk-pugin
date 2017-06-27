@@ -44,12 +44,12 @@ clean:
 css:
 	@mkdir -p $(PUBLIC_FOLDER)/stylesheets
 	@$(NODE_SASS) --output-style compressed -o $(PUBLIC_FOLDER)/stylesheets $(STYLESHEETS_LOC)
-	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/*
+	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/* -x
 
 # Minifies javascript files
 js:
 	@mkdir -p $(PUBLIC_FOLDER)/javascripts
-	@$(UGLIFY_JS) $(JAVASCRIPTS_LOC)/*.js -m -o $(PUBLIC_FOLDER)/javascripts/main.js --timings
+	@$(UGLIFY_JS) $(JAVASCRIPTS_LOC)/*.js -m -o $(PUBLIC_FOLDER)/javascripts/main.js
 
 # Minifies images
 images:
