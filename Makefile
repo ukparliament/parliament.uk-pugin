@@ -45,7 +45,7 @@ css:
 	@mkdir -p $(PUBLIC_FOLDER)/stylesheets
 	@$(NODE_SASS) --output-style compressed -o $(PUBLIC_FOLDER)/stylesheets $(STYLESHEETS_LOC)
 	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/* --no-map
-	@node scripts/css-env-setter.js --file $(PUBLIC_FOLDER)/stylesheets/main.css
+	@node scripts/css-env-setter.js --file $(PUBLIC_FOLDER)/stylesheets/*
 
 # Minifies javascript files
 js:
