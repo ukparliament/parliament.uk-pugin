@@ -44,8 +44,8 @@ clean:
 css:
 	@mkdir -p $(PUBLIC_FOLDER)/stylesheets
 	@$(NODE_SASS) --output-style compressed -o $(PUBLIC_FOLDER)/stylesheets $(STYLESHEETS_LOC)
-	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/* -x
-	@node scripts/css-env-setter.js --file $(PUBLIC_FOLDER)/stylesheets/*
+	@$(POSTCSS) -u autoprefixer -r $(PUBLIC_FOLDER)/stylesheets/* --no-map
+	@node scripts/css-env-setter.js --file $(PUBLIC_FOLDER)/stylesheets/main.css
 
 # Minifies javascript files
 js:

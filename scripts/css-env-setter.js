@@ -1,12 +1,8 @@
 // This will replace the static asset variable in the CSS
 const fs =   require('fs'),
 			argv = require('minimist')(process.argv.slice(2));
-
-let STATIC_ASSETS_URL = process.env.STATIC_ASSETS_URL;
-
-if(typeof STATIC_ASSETS_URL == 'undefined') {
-	STATIC_ASSETS_URL = 'https://s3-eu-west-1.amazonaws.com/web1devci.static-assets';
-}
+			s3BucketURL = 'https://s3-eu-west-1.amazonaws.com/web1devci.static-assets';
+			STATIC_ASSETS_URL = (typeof process.env.STATIC_ASSETS_URL === 'undefined') ? s3BucketURL : process.env.STATIC_ASSETS_URL;
 
 fs.readFile(argv.file, 'utf8', function (err,data) {
 	if (err) {
