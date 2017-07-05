@@ -47,13 +47,7 @@
 	background-color: white;
 	@include outer-container;
 	margin-bottom: $base-spacing-unit-small;
-
-	> :first-child {
-		margin-top: 0;
-	}
-  :last-child {
-		margin-bottom: 0;
-	}
+	@include first-child__last-child;
 }
 
 .block--border {
@@ -84,12 +78,7 @@
 .column--75,
 .column--25 {
 	display: inline-block;
-	& > :first-child {
-		margin-top: 0;
-	}
-	& > :last-child {
-		margin-bottom: 0;
-	}
+	@include first-child__last-child;
 }
 
 .column--75 {

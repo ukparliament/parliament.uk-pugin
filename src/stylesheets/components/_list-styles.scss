@@ -28,15 +28,9 @@ dl, dt, dd {
   }
   li {
     position: relative;
-
+		@include first-child__last-child;
     * {
       margin-bottom: $base-spacing-unit;
-    }
-    > :first-child {
-      margin-top: 0;
-    }
-    > :last-child {
-      margin-bottom: 0;
     }
     &.active {
       color: $navy;
