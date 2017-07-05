@@ -55,7 +55,7 @@ button:-moz-focusring,
 
 // Form block holders
 
-.form-group {
+form, .form-group {
   margin-bottom: $base-spacing-unit-tiny;
   input {
     width: 65%;

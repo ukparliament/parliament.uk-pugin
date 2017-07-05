@@ -2,17 +2,13 @@
 
 .visually-hidden {
   visibility: hidden;
-}
-
-.hidden {
-	display: none;
+  opacity: 0;
+  height: 0;
 }
 
 .sr-only {
-	@include screenreader;
+  @include screenreader;
 }
-
-// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
 
 .sr-only--focusable {
   &:focus, &:active {

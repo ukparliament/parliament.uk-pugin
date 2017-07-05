@@ -21,7 +21,7 @@
   a {
     @include links(
       $color, 			// a:link colour
-      underline,		// a:link decoration
+      inherit,  		// a:link decoration
       $color, 			// a:visited color
       $hover-color,	// a:hover color
       $navy,	 			// a:active color
@@ -103,4 +103,13 @@
   animation-delay: $delay;
   animation-iteration-count: $interation;
   animation-name: $name;
+}
+
+@mixin first-child__last-child() {
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
 }
