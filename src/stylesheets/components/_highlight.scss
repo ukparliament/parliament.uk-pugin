@@ -1,95 +1,32 @@
-// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
+/*--- Banner Component ---*/
 
-// Highlight Base Settings
-
-[class*="highlight--"] {
-  width: 100%;
-  display: inline-block;
+.banner {
+  background-color: $grey-4;
   @include first-child__last-child;
-}
-
-// Highlight box
-
-.highlight--box {
-  margin-bottom: $base-spacing-unit-small;
-  padding: $base-spacing-unit-small;
-  border-left-width: $base-spacing-unit;
-  border-left-style: solid;
-  background-color: $grey-4;
-}
-
-// Highlight status
-
-.highlight--status {
   padding: $base-spacing-unit-tiny 0;
-  background-color: $grey-4;
 }
 
-// Highlight colours - Pass in colours for (background, border, typography, hover, line-break)
-.highlight {
-  @include highlight-color($grey-4, $grey-4, $grey-1, $blue-soft, $white);
-}
-.highlight--default {
-  @include highlight-color($navy, $grey-3, $white, $primary-soft, $white);
-  a:active {
-  	color: #7592C8;
-  }
-}
-.highlight--primary {
-  @include highlight-color($primary, $primary-soft, $white, $primary-soft, $primary-soft);
-}
-.highlight--primary__soft {
-  @include highlight-color($primary-soft, $primary, $grey-1, $black, $primary);
-}
-.highlight--secondary {
-  @include highlight-color($secondary, $secondary-soft, $navy, $black, $secondary-soft);
-}
-.highlight--secondary__soft {
-  @include highlight-color($secondary-soft, $secondary, $grey-1, $black, $secondary);
-}
-.highlight--caution {
-  @include highlight-color($caution, $caution-soft, $navy, $black, $caution-soft);
-}
-.highlight--caution__soft {
-  @include highlight-color($caution-soft, $caution, $navy, $black, $caution);
-}
-.highlight--warning {
-  @include highlight-color($warning, $warning-soft, $white, $warning-soft, $warning-soft);
-}
-.highlight--warning__soft {
-  @include highlight-color($warning-soft, $warning, $navy, $black, $warning);
-}
-.highlight--success {
-  @include highlight-color($success, $success-soft, $navy, $black, $success-soft);
-}
-.highlight--success__soft {
-  @include highlight-color($success-soft, $success, $navy, $black, $success);
-}
-.highlight--secondary,
-.highlight--secondary__soft
-.highlight--success,
-.highlight--success__soft {
-  a:focus {
-    background-color: $grey-4;
-    outline-color: $grey-4;
-  }
-}
+/*--- Hero Component ---*/
 
-@include media($desktop) {
-  .section--primary[class*="highlight--"] {
-    padding: ($base-spacing-unit-medium * 2) 0;
+.hero {
+  @include media($desktop) {
+    padding: $base-spacing-unit-medium 0 ($base-spacing-unit-medium * 2) 0;
     .container {
       padding-right: ($base-spacing-unit-extra-large * 6);
     }
   }
+  padding: $base-spacing-unit-tiny 0 ($base-spacing-unit-tiny * 2);
+  margin-bottom: 0px;
 }
 
-// Allow for less padding against header when section is the same color
-[class*="section--primary highlight--"] {
-	padding: $base-spacing-unit-tiny 0 ($base-spacing-unit-tiny * 2);
-	margin-bottom: 0px;
+/*--- Highlight Component ---*/
 
-	@include media($desktop) {
-	  padding: $base-spacing-unit-medium 0 ($base-spacing-unit-medium * 2);
-	}
+.highlight {
+  border-color: $purple;
+  border-left-style: solid;
+  background-color: $purple--light;
+  @include first-child__last-child;
+  border-left-width: $base-spacing-unit;
+  padding: $base-spacing-unit-small;
+  margin-bottom: $base-spacing-unit-small;
 }
