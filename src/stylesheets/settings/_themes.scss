@@ -1,0 +1,48 @@
+[class*="theme"] {
+	@include first-child__last-child;
+}
+
+/*--- Theme includes [background-colour, colour, colour-hover] ---*/
+
+.theme__deep-purple {
+	@include theme($deep-purple, $grey-5, $grey-3);
+}
+.theme__deep-purple--light {
+	@include theme($deep-purple, $grey-5, $grey-3);
+}
+.theme__grey-1 {
+	@include theme($grey-1, $deep-purple, $grey-3);
+}
+.theme__grey-2 {
+	@include theme($grey-2, $deep-purple, $grey-3);
+}
+.theme__grey-3 {
+	@include theme($grey-3, $deep-purple, $grey-3);
+}
+.theme__grey-4 {
+	@include theme($grey-4, $deep-purple, $grey-3);
+}
+.theme__grey-5 {
+	@include theme($grey-5, $deep-purple, $grey-3);
+}
+.theme__mint {
+	@include theme($mint, $grey-5, $grey-3);
+}
+.theme__mint--light {
+	@include theme($mint--light, $grey-5, $grey-3);
+}
+.theme__mint--dark {
+	@include theme($mint--dark, $grey-5, $grey-3);
+}
+.theme__purple {
+	@include theme($purple, $grey-5, $grey-3);
+}
+.theme__purple__dark {
+	@include theme($purple--dark, $grey-5, $grey-3);
+}
+.theme__purple__light {
+	@include theme($purple--light, $grey-5, $grey-3);
+}
+.theme__white {
+	@include theme($white, $deep-purple, $grey-3);
+}

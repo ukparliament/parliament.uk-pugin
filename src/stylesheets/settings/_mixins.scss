@@ -1,10 +1,12 @@
-// Pass in desired Pixel value to get REM/Pixel fallback
+/*--- Font Size [size] Pass Pixel value to get REM/Pixel fallback ---*/
+
 @mixin fontsize($size){
   font-size:   $size + 0px;
   font-size:   ($size / 16) + 0rem;
 }
 
-// Pass in desired pixel value for top left, top right, bottom right, bottom left border radius declarations
+/*--- Border Radius [top left, top right, bottom right, bottom left] ---*/
+
 @mixin border-radius($top-left, $top-right, $bot-right, $bot-left) {
   border-top-left-radius: ($top-left + 0px);
   border-top-right-radius: ($top-right + 0px);
@@ -12,34 +14,41 @@
   border-bottom-left-radius: ($bot-left + 0px);
 }
 
-// Pass in background colour, border color, typography, hover colour
-@mixin highlight-color($background, $border, $color, $hover-color, $line-break){
-  background-color: $background;
-  border-color: $border;
-  color: $color;
+/*--- Theme [background colour, typography, hover colour] ---*/
 
-  a {
-    @include links(
-      $color, 			// a:link colour
-      inherit,  		// a:link decoration
-      $color, 			// a:visited color
-      $hover-color	// a:hover color
-    );
-    &:focus {
-      color: $navy;
-      text-decoration: none;
-    }
-  }
-  h1 {
-    color: $color;
-
-    &:after {
-      background-color: $line-break !important;
-    }
-  }
+@mixin theme($background, $color, $hover-color) {
+	color: $color;
+	background-color: $background !important;
+	a {
+		@include links(
+			$color, 			// a:link colour
+			underline,	 	// a:link decoration
+			$color, 			// a:visited color
+			$hover-color	// a:hover color
+		);
+		&:focus {
+			color: $navy;
+			text-decoration: none;
+		}
+	}
+	h1 {
+		color: $color;
+	}
 }
 
-// Screen reader visible only
+/*--- Accent [line-break colour] ---*/
+
+@mixin accent($color) {
+	h1 {
+		&:after {
+			background-color: $color !important;
+		}
+	}
+	border-color: $color !important;
+}
+
+/*--- Screen Reader ---*/
+
 @mixin screenreader {
   width: 1px;
   padding: 0;
@@ -51,7 +60,8 @@
   clip: rect(0 0 0 0);
 }
 
-// Pass in desired line-break sizes
+/*--- Line Break [height, width, colour] ---*/
+
 @mixin line-break($height, $width, $color) {
   height: $height;
   width: $width;
@@ -60,7 +70,8 @@
   background-color: $color;
 }
 
-// Pass in link colour, link decoration, visited colour, hover colour, active colour, active decoration
+/*--- Link [link colour, link decoration, visited colour, hover colour] ---*/
+
 @mixin links($link-color, $link-decoration, $visited-color, $hover-color) {
   &:link {
     color: $link-color;
@@ -74,29 +85,33 @@
   }
 }
 
-// Pass in navigation margins top and bottom
+/*--- Navigation [margin-top, margin-bottom] ---*/
+
 @mixin navigation($margin-top, $margin-bottom) {
   @extend .list--inline;
   margin-top: $margin-top;
   margin-bottom: $margin-bottom;
-
 }
 
-// Pass in navigation controls float, margin left and margin right
+/*--- Navigation Control [float, margin left and margin right] ---*/
+
 @mixin navigation-control($float, $margin-left, $margin-right) {
   float: $float;
   margin-left: $margin-left;
   margin-right: $margin-right;
 }
 
-// Pass in duration, timing function, delay, interation count and name
-@mixin css-animation($duration, $timing-func, $delay, $interation, $name) {
+/*--- CSS Animation [duration, timing function, delay, interation count, name] ---*/
+
+@mixin css-animation($duration, $timing-func, $delay, $iteration, $name) {
   animation-duration: $duration;
   animation-timing-function: $timing-func;
   animation-delay: $delay;
-  animation-iteration-count: $interation;
+  animation-iteration-count: $iteration;
   animation-name: $name;
 }
+
+/*--- Remove top/bottom margins ---*/
 
 @mixin first-child__last-child() {
   :first-child {
@@ -106,6 +121,8 @@
     margin-bottom: 0;
   }
 }
+
+/*--- Button [colour, background, background-hover] ---*/
 
 @mixin button($color, $background, $background-hover) {
 	@extend .btn;
