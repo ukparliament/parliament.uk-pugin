@@ -1,5 +1,7 @@
 /*--- Accent includes [line-break color] ---*/
 
+.hero,
+.highlight,
 [class*="theme"] {
 	&.accent__deep-purple {
 		@include accent($deep-purple);
