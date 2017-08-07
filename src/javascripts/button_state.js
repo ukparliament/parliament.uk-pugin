@@ -1,15 +1,28 @@
 // Adds 'loading icon' to button[type="submit"] when clicked
 
 (function () {
-	var buttons = document.querySelectorAll('button');
 
-	for (var i = 0; i < buttons.length; i++) {
-		buttons[i].addEventListener('click', btnClick, false);
+	// Select <form> elements
+	var forms = document.querySelectorAll('form');
+
+	// Event listener for form submit
+	for (var f = 0; f < forms.length; f++) {
+		forms[f].addEventListener('submit', formSubmit, false);
 	}
 
-	function btnClick(e) {
-		if (this.type.toLowerCase() === 'submit') {
-			this.classList.add('btn--loading');
+	function formSubmit() {
+
+		// If form submission contains valid data
+		if ( this.checkValidity() ) {
+
+			// Select <button> elements
+			var buttons = this.querySelectorAll('button');
+			for (var i = 0; i < buttons.length; i++) {
+				// if button type=submit
+				if (buttons[i].type.toLowerCase() === 'submit') {
+					this.classList.add('btn--loading');
+				}
+			}
 		}
 	}
 
