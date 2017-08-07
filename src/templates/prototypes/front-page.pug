@@ -2,7 +2,7 @@ extends ../../layouts/layout-front-page.pug
 block content
   -var thingPage = true
 
-  .section--primary.hero.theme__deep-purple#content
+  .section--primary.hero#content
     .container
       h1 Welcome to the UK Parliament test website
       p We're building a #[+link('#', 'new website for Parliament')]. These pages are being tested and improved - they may be inaccurate or misleading.
@@ -21,7 +21,7 @@ block content
         +list--block__generic('Constituencies', 'Find MPs by the area they represent')
         +list--block__generic('Parties and groups', 'Find MPs and Lords by their party or group')
 
-      .highlight
+      .status--highlight
         p Read the latest Members service #[+link('#', 'blog post')].
 
       h2 Follow our progress

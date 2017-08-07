@@ -1,14 +1,8 @@
-/*--- Banner Component ---*/
-
-.banner {
-  background-color: $grey-4;
-  @include first-child__last-child;
-  padding: $base-spacing-unit-tiny 0;
-}
-
 /*--- Hero Component ---*/
 
 .hero {
+  @include first-child__last-child;
+  @extend .theme--deep-purple;
   @include media($desktop) {
     padding: $base-spacing-unit-medium 0 ($base-spacing-unit-medium * 2) 0;
     .container {
@@ -19,12 +13,17 @@
   margin-bottom: 0px;
 }
 
-/*--- Highlight Component ---*/
+/*--- Status Components ---*/
 
-.highlight {
-  border-color: $purple;
+.status--banner {
+  background-color: $grey-4;
+  @include first-child__last-child;
+  padding: $base-spacing-unit-tiny 0;
+}
+
+.status--highlight {
   border-left-style: solid;
-  background-color: $purple--light;
+  @extend .theme--purple--light;
   @include first-child__last-child;
   border-left-width: $base-spacing-unit;
   padding: $base-spacing-unit-small;

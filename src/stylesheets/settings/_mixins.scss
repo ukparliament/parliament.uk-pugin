@@ -18,8 +18,8 @@
 
 @mixin theme($background, $color, $link-color, $hover-color, $accent) {
 	color: $color;
-	border-color: $color;
-	background-color: $background !important;
+	border-color: $accent;
+	background-color: $background;
 
 	a {
 		@include links(

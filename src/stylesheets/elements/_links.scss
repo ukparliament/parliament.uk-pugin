@@ -127,9 +127,9 @@ footer a  {
 
 /*--- Themes Alternative Focus ---*/
 
-.theme__mint,
-.theme__warning--light,
-.theme__success--light {
+.theme--mint,
+.theme--warning,
+.theme--success {
 	a:focus {
 		background: $grey-5;
 		outline: 3px solid $grey-5;
