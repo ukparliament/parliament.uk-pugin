@@ -116,16 +116,17 @@ h6 {
 
 // Component Heading Settings (pixels)
 
-[class*="theme"] {
+.block,
+.hero {
   h1 {
     position: relative;
     margin-bottom: $base-spacing-unit-large;
   }
   h1:after {
     @extend .line-break--lg;
-    position: absolute;
-    content: '';
     left: 0;
+    content: '';
+    position: absolute;
     bottom: - $base-spacing-unit-extra-large;
   }
 }
