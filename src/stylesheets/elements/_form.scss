@@ -18,7 +18,7 @@ input {
   padding: ($base-spacing-unit-tiny - 1);
 
   &[name="postcode"] {
-  	text-transform: uppercase;
+    text-transform: uppercase;
   }
 
   @include media($desktop) {
@@ -52,6 +52,9 @@ form, .form-group {
     display: inline-block;
     margin-right: -$base-spacing-unit;
     vertical-align: top;
+  }
+  input, button {
+    min-height: 48px;
   }
 }
 
