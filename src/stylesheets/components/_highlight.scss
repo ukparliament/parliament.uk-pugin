@@ -3,14 +3,16 @@
 .hero {
   @include first-child__last-child;
   @extend .theme--deep-purple;
+
+  padding: $base-spacing-unit-tiny 0 ($base-spacing-unit-tiny * 2);
+  margin-bottom: 0px;
+
   @include media($desktop) {
     padding: $base-spacing-unit-medium 0 ($base-spacing-unit-medium * 2) 0;
     .container {
       padding-right: ($base-spacing-unit-extra-large * 6);
     }
   }
-  padding: $base-spacing-unit-tiny 0 ($base-spacing-unit-tiny * 2);
-  margin-bottom: 0px;
 }
 
 /*--- Status Components ---*/

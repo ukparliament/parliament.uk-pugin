@@ -5,14 +5,19 @@
 p {
   margin-top: 0;
   margin-bottom: $base-spacing-unit-small;
-  line-height: 1.5 // 24px
+  line-height: 1.5; // 24px
+  @include fontsize(16);
+  @include media($tablet) {
+    @include fontsize(18);
+  }
 }
+
 
 .lead {
   @include fontsize(21);
   line-height: 1.333; // 24px;
   margin-bottom: $base-spacing-unit-extra-large;
-  @include media($desktop) {
+  @include media($tablet) {
     @include fontsize(24);
     line-height: 1.250; // 30px;
   }
@@ -40,7 +45,7 @@ header {
       line-height: 1.125; // 18px;
       font-weight: 400;
 
-      @include media($desktop) {
+      @include media($tablet) {
         @include fontsize(18);
         line-height: 1.5 // 24px
       }
@@ -55,7 +60,7 @@ button, input, label, optgroup, select, textarea, figcaption {
 .btn, button, input {
   @include fontsize(16);
   line-height: 26px;
-  @include media($desktop) {
+  @include media($tablet) {
     @include fontsize(18);
     line-height: 24px;
   }
@@ -63,7 +68,7 @@ button, input, label, optgroup, select, textarea, figcaption {
 
 label, optgroup, select, textarea {
   @include fontsize(16);
-  @include media($desktop) {
+  @include media($tablet) {
     @include fontsize(18);
   }
 }
