@@ -81,9 +81,8 @@ mixin list--pipe(constituency, date, name)
 mixin list--pipe__media(imgURL, imgAlt, heading, btnURL, btnText)
   li
     figure
-      +link('#', '')(tabIndex=-1)
-        picture
-          +image(imgURL, imgAlt)
+      picture
+        +image(imgURL, imgAlt)
     .list--details
       h3= heading
       +link(btnURL, btnText)(class='btn--primary' download)
