@@ -4,16 +4,16 @@ root = true
 charset = utf-8
 end_of_line = lf
 indent_size = 2
-indent_style = tab
+indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.scss]
-indent_style = tab
+indent_style = space
 indent_size = 2
 
 [*.js]
-indent_style = tab
+indent_style = space
 indent_size = 2
 
 [*.md]
@@ -23,5 +23,5 @@ trim_trailing_whitespace = false
 indent_style = tab
 
 [{package.json,composer.json}]
-indent_style = tab
+indent_style = space
 indent_size = 2

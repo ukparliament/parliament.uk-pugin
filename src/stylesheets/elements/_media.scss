@@ -11,7 +11,7 @@ figure {
   margin: 0 0 $base-spacing-unit-small 0;
 }
 picture {
-	display: block;
+  display: block;
 }
 .list--block li {
   figure, picture {
@@ -22,27 +22,27 @@ picture {
     margin: 0 $base-spacing-unit-small 0 0;
 
     a {
-    	position: relative;
-    	&:active, &:hover {
-    		background: transparent;
-    		outline: none;
-    		&:after {
-    			bottom: 0;
-			    z-index: 1;
-			    content: "";
-			    width: 84px;
-			    height: 84px;
-			    opacity: 0.2;
-			    position: absolute;
-			    border-radius: 50%;
-			    background-color: $navy;
+      position: relative;
+      &:active, &:hover {
+        background: transparent;
+        outline: none;
+        &:after {
+          bottom: 0;
+          z-index: 1;
+          content: "";
+          width: 84px;
+          height: 84px;
+          opacity: 0.2;
+          position: absolute;
+          border-radius: 50%;
+          background-color: $navy;
 
-			    @include media($desktop) {
-			    	width: 93px;
-			    	height: 93px;
-			    }
-    		}
-    	}
+          @include media($desktop) {
+            width: 93px;
+            height: 93px;
+          }
+        }
+      }
     }
 
     @include media($desktop) {
@@ -66,15 +66,15 @@ picture {
     height: auto;
     border-radius: 0;
     background-color: $grey-4;
-		margin: 0 $base-spacing-unit-small 0 0;
+    margin: 0 $base-spacing-unit-small 0 0;
   }
   img {
     width: 100%;
     height: auto;
-		border-radius: 0;
-		&:hover {
-			opacity: 0.8;
-		}
+    border-radius: 0;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 img {
@@ -133,10 +133,10 @@ figcaption {
 
 .section--primary {
   img + h1 {
-  	margin-bottom: $base-spacing-unit-tiny / 2;
+    margin-bottom: $base-spacing-unit-tiny / 2;
   }
   img ~ p:last-child {
-  	margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 

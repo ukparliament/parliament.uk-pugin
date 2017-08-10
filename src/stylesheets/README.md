@@ -16,11 +16,6 @@ Those layers are as follows:
 * **Components** – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
 * **Trumps** – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
 
-
-# CSS Float Based Grid System - Bourbon Neat
-
-The float based grid system used in Pugin is Bourbon Neat - http://neat.bourbon.io/. Variables, Mixins, etc usage can be found at http://thoughtbot.github.io/neat-docs/ and basic examples of grid layout configurations can be found at http://neat.bourbon.io/examples/.
-
 ## Basic Guidelines
 
 1. Base page dimensions, grid settings and breakpoints are declared in the `objects/grid-settings.scss` file

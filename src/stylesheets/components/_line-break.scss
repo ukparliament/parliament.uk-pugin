@@ -8,7 +8,7 @@
 }
 
 @include media($desktop) {
-	.line-break--lg {
-		@include line-break($base-spacing-unit-tiny / 3, (100 + 0px));
-	}
+  .line-break--lg {
+    @include line-break($base-spacing-unit-tiny / 3, (100 + 0px));
+  }
 }

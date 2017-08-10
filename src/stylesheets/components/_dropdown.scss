@@ -1,26 +1,26 @@
 .dropdown {
-	background-color: $grey-4;
-	margin-bottom: $base-spacing-unit-small;
+  background-color: $grey-4;
+  margin-bottom: $base-spacing-unit-small;
 }
 
 .dropdown__toggle {
-	position: relative;
-	@include first-child__last-child;
+  position: relative;
+  @include first-child__last-child;
 }
 
 .dropdown__content {
-	opacity: 1;
-	height: auto;
-	overflow: hidden;
-	transition: all 0.1s linear;
-	padding: 0 $base-spacing-unit-small $base-spacing-unit-small;
-	@include first-child__last-child;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+  transition: all 0.1s linear;
+  padding: 0 $base-spacing-unit-small $base-spacing-unit-small;
+  @include first-child__last-child;
 
   &.active {
-  	display: block;
+    display: block;
   }
 }
 
 .dropdown__content.visually-hidden {
-	padding: 0 $base-spacing-unit-small;
+  padding: 0 $base-spacing-unit-small;
 }
