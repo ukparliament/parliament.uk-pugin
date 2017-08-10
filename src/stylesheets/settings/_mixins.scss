@@ -17,40 +17,40 @@
 /*--- Theme [background colour, typography, link colour, hover colour] ---*/
 
 @mixin theme($background, $color, $link-color, $hover-color, $accent) {
-	color: $color;
-	border-color: $accent;
-	background-color: $background;
+  color: $color;
+  border-color: $accent;
+  background-color: $background;
 
-	a {
-		@include links(
-			$link-color, 	// a:link colour
-			underline,	 	// a:link decoration
-			$color, 			// a:visited color
-			$hover-color	// a:hover color
-		);
-		&:focus {
-			color: $navy;
-			text-decoration: none;
-		}
-	}
-	h1 {
-		color: $color;
+  a {
+    @include links(
+      $link-color, 	// a:link colour
+      underline,	 	// a:link decoration
+      $color, 			// a:visited color
+      $hover-color	// a:hover color
+    );
+    &:focus {
+      color: $navy;
+      text-decoration: none;
+    }
+  }
+  h1 {
+    color: $color;
 
-		&:after {
-			background-color: $accent;
-		}
-	}
+    &:after {
+      background-color: $accent;
+    }
+  }
 }
 
 /*--- Accent [line-break colour] ---*/
 
 @mixin accent($color) {
-	h1 {
-		&:after {
-			background-color: $color;
-		}
-	}
-	border-color: $color;
+  h1 {
+    &:after {
+      background-color: $color;
+    }
+  }
+  border-color: $color;
 }
 
 /*--- Screen Reader ---*/
@@ -130,35 +130,35 @@
 /*--- Button [colour, background, background-hover] ---*/
 
 @mixin button($color, $background, $background-hover) {
-	@extend .btn;
-	@include links(
-		$color, 			// a:link colour
-		none, 				// a:link decoration
-		$white, 			// a:visited color
-		$white 				// a:hover color
-	);
-	color: $color;
-	background-color: $background;
+  @extend .btn;
+  @include links(
+    $color, 			// a:link colour
+    none, 				// a:link decoration
+    $white, 			// a:visited color
+    $white 				// a:hover color
+  );
+  color: $color;
+  background-color: $background;
 
-	&:hover, &:focus {
-		color: $color;
-		background-color: $background-hover;
-	}
+  &:hover, &:focus {
+    color: $color;
+    background-color: $background-hover;
+  }
 }
 
 /*--- Media Queries [size] ---*/
 
 @mixin media($size) {
-	@if $size == $desktop {
-		@media (min-width: $desktop) {
-			@content;
-		}
-	}
-	@else if $size == $tablet {
-		@media (min-width: $tablet) {
-			@content;
-		}
-	}
+  @if $size == $desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+  @else if $size == $tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
 }
 
 /*--- Clearfix for containing floats ---*/

@@ -5,11 +5,11 @@ header {
   padding-bottom: ($base-spacing-unit-small - 1); // -1px to compensate for border height
   background-color: $navy;
   a {
-  	display: inline-block;
+    display: inline-block;
   }
-	.container {
-		line-height: 0;
-	}
+  .container {
+    line-height: 0;
+  }
 }
 
 // Physical Print Styles

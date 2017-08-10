@@ -6,19 +6,19 @@
 'use strict';
 
 function ukp_getJsonFile(path, callback) {
-	var request = new XMLHttpRequest();
-	request.open('GET', path);
-	request.onreadystatechange = function () {
-		if (request.readyState === 4) {
-			if (request.status === 200) {
-				var response = JSON.parse(request.responseText);
-				if (callback) {
-					callback(response);
-				}
-			} else {
-				console.log(request.statusText);
-			}
-		}
-	};
-	request.send();
+  var request = new XMLHttpRequest();
+  request.open('GET', path);
+  request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        var response = JSON.parse(request.responseText);
+        if (callback) {
+          callback(response);
+        }
+      } else {
+        console.log(request.statusText);
+      }
+    }
+  };
+  request.send();
 }

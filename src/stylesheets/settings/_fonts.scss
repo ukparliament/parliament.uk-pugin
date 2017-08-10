@@ -1,9 +1,9 @@
 @font-face {
-	font-family: 'National';
-	src: url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.eot');
-	src: url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.eot?#iefix') format('embedded-opentype'),
-	     url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.woff2') format('woff2'),
-	     url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.woff') format('woff');
+  font-family: 'National';
+  src: url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.eot');
+  src: url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.eot?#iefix') format('embedded-opentype'),
+       url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.woff2') format('woff2'),
+       url('<% STATIC_ASSET_LOCATION_URL %>/National-LFS-Book.woff') format('woff');
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   src: url('<% STATIC_ASSET_LOCATION_URL %>/National-LF-BookItalic.eot?#iefix') format('embedded-opentype'),
        url('<% STATIC_ASSET_LOCATION_URL %>/National-LF-BookItalic.woff2') format('woff2'),
        url('<% STATIC_ASSET_LOCATION_URL %>/National-LF-BookItalic.woff') format('woff');
-	font-style: italic;
+  font-style: italic;
 }
 
 @font-face {
@@ -31,7 +31,7 @@
        url('<% STATIC_ASSET_LOCATION_URL %>/National-LF-SemiboldItalic.woff2') format('woff2'),
        url('<% STATIC_ASSET_LOCATION_URL %>/National-LF-SemiboldItalic.woff') format('woff');
   font-weight: 500;
-	font-style: italic;
+  font-style: italic;
 }
 
 $base-font-stack: 'National', Arial, 'Helvetica Neue', Helvetica, sans-serif;

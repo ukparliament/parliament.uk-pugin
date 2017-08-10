@@ -1,15 +1,15 @@
 mixin button(value, style)
-	button(type='submit', value=value, class=style)=value
+  button(type='submit', value=value, class=style)=value
 
 mixin buttonSubmit(value, style)
-	button(type='submit', value=value, class=style)
-		span.btn--loading__text=value
-		span.btn--loading__icon
-			figure
-				include ../icons/loading.svg
+  button(type='submit', value=value, class=style)
+    span.btn--loading__text=value
+    span.btn--loading__icon
+      figure
+        include ../icons/loading.svg
 
 mixin buttonDisabled(value)
-	button(type='submit', value=value, class='btn--disabled' disabled)=value
+  button(type='submit', value=value, class='btn--disabled' disabled)=value
 
 mixin buttonLink(link, value, style)
-	+link(link, value)(class=style, download)
+  +link(link, value)(class=style, download)

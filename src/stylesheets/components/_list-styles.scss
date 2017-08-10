@@ -22,9 +22,9 @@ dl, dt, dd {
   list-style: none;
   margin: 0 0 $base-spacing-unit-small;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   ol, ul {
     margin: 0;
@@ -32,7 +32,7 @@ dl, dt, dd {
   }
   li {
     position: relative;
-		@include first-child__last-child;
+    @include first-child__last-child;
     * {
       margin-bottom: $base-spacing-unit;
     }
@@ -68,69 +68,69 @@ dl, dt, dd {
   @extend .list;
 
   li {
-  	@extend .block;
+    @extend .block;
     margin-bottom: $base-spacing-unit;
     display: inline-flex;
     width: 100%;
   }
   .list--details {
-  	display: inline-block;
-  	margin-top: 0;
-  	h2, h3, h4 {
-  		margin-top: 0;
-  	}
-  	:last-child {
-  		margin-bottom: 0;
-  	}
+    display: inline-block;
+    margin-top: 0;
+    h2, h3, h4 {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
 }
 .list--block__inline {
-	@extend .list--block;
-	@include clearfix;
+  @extend .list--block;
+  @include clearfix;
 
-	flex-wrap: wrap;
-	flex-direction: row;
-	display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: inline-flex;
 
-	li {
-		width: auto;
-		flex-grow: 1;
-		display: inline-block;
-		margin-right: $base-spacing-unit;
+  li {
+    width: auto;
+    flex-grow: 1;
+    display: inline-block;
+    margin-right: $base-spacing-unit;
 
-		.list--details * {
-			display: inline;
-		}
-	}
+    .list--details * {
+      display: inline;
+    }
+  }
 }
 .list--pipe {
-	@extend .list;
+  @extend .list;
   li {
     border-bottom: solid 1px $grey-3;
     background: transparent;
     padding: $base-spacing-unit-tiny 0 ($base-spacing-unit-tiny - 1) 0;
     margin-bottom: 0;
-		display: inline-flex;
-		width: 100%;
+    display: inline-flex;
+    width: 100%;
   }
   li:first-of-type {
     border-top: solid 1px $grey-3;
     padding-top: ($base-spacing-unit-tiny - 1);
   }
-	.list--details {
-		display: inline-block;
-		margin-top: 0;
-		h2, h3, h4 {
-			margin-top: 0;
-		}
-		:last-child {
-			margin-bottom: 0;
-		}
-	}
+  .list--details {
+    display: inline-block;
+    margin-top: 0;
+    h2, h3, h4 {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 .list--definition {
-	margin: 0 0 $base-spacing-unit-small;
+  margin: 0 0 $base-spacing-unit-small;
 
   & dt {
     float: left;

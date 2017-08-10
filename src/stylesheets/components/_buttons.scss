@@ -1,80 +1,80 @@
 /*--- Button Base ---*/
 
 .btn {
-	border: none;
-	cursor: pointer;
-	min-width: 70px;
-	position: relative;
-	border-radius: 4px;
-	text-align: center;
-	color: $deep-purple;
-	display: inline-block;
-	background-color: $grey-5;
-	padding: ($base-spacing-unit-tiny / 2) $base-spacing-unit-tiny;
-	margin: 0 ($base-spacing-unit-tiny / 2) ($base-spacing-unit-tiny / 2) 0;
+  border: none;
+  cursor: pointer;
+  min-width: 70px;
+  position: relative;
+  border-radius: 4px;
+  text-align: center;
+  color: $deep-purple;
+  display: inline-block;
+  background-color: $grey-5;
+  padding: ($base-spacing-unit-tiny / 2) $base-spacing-unit-tiny;
+  margin: 0 ($base-spacing-unit-tiny / 2) ($base-spacing-unit-tiny / 2) 0;
 
-	.form-group & {
-		padding: $base-spacing-unit-tiny $base-spacing-unit-small;
-		@include border-radius(0, ($base-spacing-unit - 2), ($base-spacing-unit - 2), 0);
+  .form-group & {
+    padding: $base-spacing-unit-tiny $base-spacing-unit-small;
+    @include border-radius(0, ($base-spacing-unit - 2), ($base-spacing-unit - 2), 0);
 
-		&:focus, &:active {
-			@include border-radius(0, ($base-spacing-unit - 2), ($base-spacing-unit - 2), 0);
-		}
-	}
-	@include media($desktop) {
-		.form-group & {
-			padding: $base-spacing-unit-tiny $base-spacing-unit-extra-large;
-		}
-	}
-	&:focus, &:active {
-		outline: none;
-	}
+    &:focus, &:active {
+      @include border-radius(0, ($base-spacing-unit - 2), ($base-spacing-unit - 2), 0);
+    }
+  }
+  @include media($desktop) {
+    .form-group & {
+      padding: $base-spacing-unit-tiny $base-spacing-unit-extra-large;
+    }
+  }
+  &:focus, &:active {
+    outline: none;
+  }
 }
 
 /*--- Button Options [colour, background, background-hover] ---*/
 
 .btn--primary {
-	@include button($white, $button--primary, $button--primary__hover);
+  @include button($white, $button--primary, $button--primary__hover);
 }
 .btn--secondary {
-	@include button($deep-purple, $button--secondary, $button--secondary__hover);
+  @include button($deep-purple, $button--secondary, $button--secondary__hover);
 }
 .btn--deep-purple {
-	@include button($white, $button--deep-purple, $button--deep-purple__hover);
+  @include button($white, $button--deep-purple, $button--deep-purple__hover);
 }
 .btn--white {
-	@include button($deep-purple, $button--white, $button--white__hover);
+  @include button($deep-purple, $button--white, $button--white__hover);
 }
 .btn--disabled {
-	@include button($grey-3, $grey-4, $grey-4);
+  @include button($grey-3, $grey-4, $grey-4);
 }
 
 /*--- Button Loader ---*/
 
 .btn--loading {
-	height: auto;
-	cursor: not-allowed;
+  height: auto;
+  cursor: not-allowed;
 
-	.btn--loading__icon {
-		opacity: 1;
-	}
-	.btn--loading__text {
-		opacity: 0;
-	}
+  .btn--loading__icon {
+    opacity: 1;
+  }
+  .btn--loading__text {
+    opacity: 0;
+  }
 }
 .btn--loading__icon {
-	left: 0;
-	right: 0;
-	top: 16%;
-	opacity: 0;
-	position: absolute;
+  left: 0;
+  right: 0;
+  top: 16%;
+  opacity: 0;
+  position: absolute;
 }
 .form-group .btn--loading__icon {
-	top: 24%;
+  top: 24%;
 }
 .btn--loading__text {
-	z-index: 1;
-	margin-top: 0;
-	position: relative;
-	display: inline-block;
+  z-index: 1;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
 }

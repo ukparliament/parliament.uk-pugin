@@ -1,13 +1,13 @@
 .map {
-	display: block;
-	height: 222px;
-	@include media($desktop) {
-		height: 292px;
-	}
-	margin-bottom: $base-spacing-unit-small;
-	width: 100%;
+  display: block;
+  height: 222px;
+  @include media($desktop) {
+    height: 292px;
+  }
+  margin-bottom: $base-spacing-unit-small;
+  width: 100%;
 
-	.leaflet-bar {
-		box-shadow: 0 1px 5px rgba(55,49,81,0.4);
-	}
+  .leaflet-bar {
+    box-shadow: 0 1px 5px rgba(55,49,81,0.4);
+  }
 }

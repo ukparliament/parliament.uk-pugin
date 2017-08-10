@@ -2,10 +2,6 @@
 
 Class-based selectors defining 'non cosmetic' design patterns - wrappers, layouts, content blocks, etc.
 
-## Grid System
-
-The float based grid system used in Pugin is Bourbon Neat 1.8.0 - http://neat.bourbon.io/. Detailed information can be found by reading the 'BOURBON-NEAT-GRID.md' readme file in this same directory.
-
 ### Pugin Grid Settings
 
 Base page dimensions, grid settings and breakpoints are declared in the `objects/grid-settings.scss` file

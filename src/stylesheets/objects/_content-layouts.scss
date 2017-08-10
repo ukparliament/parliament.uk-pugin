@@ -3,104 +3,104 @@
 // Section Options
 
 .section--primary {
-	padding-top: $base-spacing-unit-extra-large;
-	margin-bottom: $base-spacing-unit-tiny;
+  padding-top: $base-spacing-unit-extra-large;
+  margin-bottom: $base-spacing-unit-tiny;
 }
 .section--minor {
-	padding: $base-spacing-unit-tiny 0;
-	.container {
-		> :last-child {
-			margin: 0;
-		}
-	}
+  padding: $base-spacing-unit-tiny 0;
+  .container {
+    > :last-child {
+      margin: 0;
+    }
+  }
 }
 .section--major {
-	padding: $base-spacing-unit-extra-large 0;
+  padding: $base-spacing-unit-extra-large 0;
 }
 
 @include media($desktop) {
-	.section--primary {
-		padding-top: ($base-spacing-unit-extra-large + $base-spacing-unit);
-		margin-bottom: $base-spacing-unit-small;
-	}
-	.section--major {
-		padding: $base-spacing-unit-extra-large 0;
-	}
-	.section--minor {
-		padding: $base-spacing-unit-small 0;
-	}
+  .section--primary {
+    padding-top: ($base-spacing-unit-extra-large + $base-spacing-unit);
+    margin-bottom: $base-spacing-unit-small;
+  }
+  .section--major {
+    padding: $base-spacing-unit-extra-large 0;
+  }
+  .section--minor {
+    padding: $base-spacing-unit-small 0;
+  }
 }
 
 // Container Options
 
 .container {
-	padding: 0 $base-spacing-unit-small;
-	margin: 0 auto;
-	max-width: $max-width;
+  padding: 0 $base-spacing-unit-small;
+  margin: 0 auto;
+  max-width: $max-width;
 }
 
 .section--primary__container {
-	@include clearfix;
+  @include clearfix;
 }
 
 // Block Options
 
 .block {
-	padding: $base-spacing-unit-small;
-	background-color: white;
-	margin-bottom: $base-spacing-unit-small;
-	@include first-child__last-child;
+  padding: $base-spacing-unit-small;
+  background-color: white;
+  margin-bottom: $base-spacing-unit-small;
+  @include first-child__last-child;
 }
 
 .block--border {
-	@include first-child__last-child;
-	padding-top: ($base-spacing-unit-small - 1); // -1px to compensate for border height
-	padding-bottom: ($base-spacing-unit-tiny - 1); // -1px to compensate for border height
-	margin-bottom: $base-spacing-unit-extra-large;
-	border-bottom: 1px solid $grey-3;
-	border-top: 1px solid $grey-3;
-	p {
-		margin-bottom: $base-spacing-unit;
-	}
-	& + .block--border {
-		border-top: none;
-		padding-top: $base-spacing-unit-small;
-		padding-bottom: ($base-spacing-unit-tiny - 1); // -1px to compensate for border height
-	}
-	&__bottom {
-		padding-bottom: ($base-spacing-unit-medium - 1); // -1px to compensate for border height
-	  border-bottom: 1px solid $grey-3;
-		margin-bottom: $base-spacing-unit-extra-large;
+  @include first-child__last-child;
+  padding-top: ($base-spacing-unit-small - 1); // -1px to compensate for border height
+  padding-bottom: ($base-spacing-unit-tiny - 1); // -1px to compensate for border height
+  margin-bottom: $base-spacing-unit-extra-large;
+  border-bottom: 1px solid $grey-3;
+  border-top: 1px solid $grey-3;
+  p {
+    margin-bottom: $base-spacing-unit;
+  }
+  & + .block--border {
+    border-top: none;
+    padding-top: $base-spacing-unit-small;
+    padding-bottom: ($base-spacing-unit-tiny - 1); // -1px to compensate for border height
+  }
+  &__bottom {
+    padding-bottom: ($base-spacing-unit-medium - 1); // -1px to compensate for border height
+    border-bottom: 1px solid $grey-3;
+    margin-bottom: $base-spacing-unit-extra-large;
 
-	  @include media($desktop) {
-		  padding-bottom: ($base-spacing-unit-large - 1); // -1px to compensate for border height
-		}
-	}
+    @include media($desktop) {
+      padding-bottom: ($base-spacing-unit-large - 1); // -1px to compensate for border height
+    }
+  }
 }
 
 // Column Layout Options
 
 .column--75,
 .column--25 {
-	display: inline-block;
-	@include first-child__last-child;
+  display: inline-block;
+  @include first-child__last-child;
 }
 
 .column--75 {
-	width: 75%;
+  width: 75%;
 }
 
 .column--25 {
-	p {
-		position: absolute;
-		right: $base-spacing-unit-small;
-		top: calc(50% - 25px); // 50% - (half the height of the column height - 1 (compensate for font height))
-		text-align: right;
-		@include media($desktop) {
-			top: calc(50% - 32px); // 50% - (half the height of the column height - 2 (compensate for font height))
-		}
-		span {
-			display:block;
-		}
-	}
+  p {
+    position: absolute;
+    right: $base-spacing-unit-small;
+    top: calc(50% - 25px); // 50% - (half the height of the column height - 1 (compensate for font height))
+    text-align: right;
+    @include media($desktop) {
+      top: calc(50% - 32px); // 50% - (half the height of the column height - 2 (compensate for font height))
+    }
+    span {
+      display:block;
+    }
+  }
 }
