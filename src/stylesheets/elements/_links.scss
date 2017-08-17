@@ -89,13 +89,15 @@ footer a  {
 /*--- Navigation ---*/
 
 .navigation--main a {
-  padding: $base-spacing-unit-tiny 3px;
   @include links(
     $grey-1, 		// a:link colour
     none,				// a:link decoration
     $grey-1, 		// a:visited color
     $grey-1 		// a:hover color
   );
+  &:link {
+    padding: $base-spacing-unit-tiny 3px;
+  }
   &:focus {
     outline: none;
   }
