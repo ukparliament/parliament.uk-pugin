@@ -108,9 +108,9 @@ footer a  {
 
 .navigation--letter li a {
   &:link {
-    padding: $base-spacing-unit-tiny 0;
+    padding: ($base-spacing-unit-tiny - 3px) 0;
     @include media($desktop) {
-      padding: ($base-spacing-unit + 3px) 0;
+      padding: ($base-spacing-unit + 2px) 0;
     }
     background-color: $white;
     color: $link;

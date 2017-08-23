@@ -1,6 +1,4 @@
-// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
-
-// Main Navigation Settings
+/*--- Navigation Main ---*/
 
 .navigation--main {
   @include navigation(0, 0);
@@ -26,7 +24,7 @@
   }
 }
 
-// Navigation letter styling
+/*--- Navigation Letter ---*/
 
 .navigation--letter {
   @extend .list--inline;
@@ -46,7 +44,10 @@
     }
 
     span {
-      padding: $base-spacing-unit-tiny 0;
+      padding: ($base-spacing-unit-tiny - 3px) 0;
+      @include media($desktop) {
+        padding: ($base-spacing-unit + 2px) 0;
+      }
     }
   }
   li.active {
@@ -56,7 +57,7 @@
   }
 }
 
-// Letter & Number Navigation Settings
+/*--- Navigation Letter & Number ---*/
 
 .navigation--letter,
 .navigation--number {
@@ -72,7 +73,7 @@
   }
 }
 
-// Number Navigation Controls Settings
+/*--- Navigation Number Controls ---*/
 
 .navigation-control--left {
   @include navigation-control(left, - $base-spacing-unit-tiny, $base-spacing-unit-tiny);
@@ -91,11 +92,6 @@
       padding: 0 ($base-spacing-unit-small - 3);
     }
   }
-  .navigation--letter {
-    li span {
-      padding: ($base-spacing-unit + 3) 0;
-    }
-  }
   .navigation--number {
     text-align: center;
 
@@ -110,7 +106,8 @@
 }
 
 
-// Print Settings
+/*--- Print ---*/
+
 @media print {
   nav {
     display: none;
