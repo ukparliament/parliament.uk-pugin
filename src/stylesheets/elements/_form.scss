@@ -64,7 +64,7 @@ textarea {
 
 input:focus,
 button:focus,
-textarea:focus, {
+textarea:focus {
   position: relative;
   z-index: 10;
   outline: 3px solid $caution;
