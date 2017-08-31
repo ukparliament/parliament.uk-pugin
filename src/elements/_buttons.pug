@@ -1,14 +1,14 @@
 //- <button>
-mixin button(value, style, type)
+mixin button(value, style, datatype, type)
   if type === 'reset'
-    button(type=type, class=style, value=value)&attributes(attributes)= value
+    button(type=type, class=style, value=value, data-type=datatype)&attributes(attributes)= value
   else
-    button(type='submit', class=style, value=value)&attributes(attributes)
+    button(type='submit', class=style, value=value, data-type=datatype)&attributes(attributes)
       span.btn--loading__text=value
       span.btn--loading__icon
         figure
           include ../icons/loading.svg
 
 
-mixin buttonLink(link, value, style)
-  +link(link, value)(class=style, download)
+mixin buttonLink(link, value, style, datatype)
+  +link(link, value)(class=style, data-type=datatype download)
