@@ -1,6 +1,6 @@
 pipelines:
   pugin:
-    group: Main
+    group: Dependencies
     label_template: "${COUNT}"
     environment_variables:
       S3_BUCKET: s3://$(AWS_ACCOUNT).pugin-website
@@ -25,10 +25,15 @@ pipelines:
                     run_if: passed
                     command: make
                     arguments:
+                      - build
+                - exec:
+                    run_if: passed
+                    command: make
+                    arguments:
                       - deploy_to_release
 
   pugin-continuously:
-    group: Main
+    group: Dependencies
     label_template: "${COUNT}"
     environment_variables:
       S3_BUCKET: s3://$(AWS_ACCOUNT).pugin-website
