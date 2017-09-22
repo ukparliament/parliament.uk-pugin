@@ -118,7 +118,7 @@ dl, dt, dd {
 
 .list--pipe {
   @extend .list;
-  li {
+  > li {
     border-bottom: solid 1px $grey-3;
     background: transparent;
     padding: $base-spacing-unit-tiny 0 ($base-spacing-unit-tiny - 1) 0;
@@ -126,7 +126,7 @@ dl, dt, dd {
     display: inline-flex;
     width: 100%;
   }
-  li:first-of-type {
+  > li:first-of-type {
     border-top: solid 1px $grey-3;
     padding-top: ($base-spacing-unit-tiny - 1);
   }
@@ -181,6 +181,7 @@ dl, dt, dd {
     margin-bottom: 0;
   }
 }
+
 
 // Footer list
 
