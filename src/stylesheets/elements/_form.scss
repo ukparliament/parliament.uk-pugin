@@ -22,9 +22,11 @@ fieldset {
 }
 
 input,
-textarea {
+textarea,
+select {
   border: 1px solid $grey-3;
   display: block;
+  margin-bottom: $base-spacing-unit-small;
   padding: ($base-spacing-unit-tiny - 1);
   width: 100%;
   @include media($tablet) {
@@ -58,6 +60,12 @@ input {
 
 textarea {
   min-height: 96px;
+}
+
+button {
+  &[type="submit"] {
+    margin-top: $base-spacing-unit-tiny;
+  }
 }
 
 // Pseudo state styling (including Mozilla focus overide)
@@ -94,6 +102,7 @@ button:-moz-focusring,
   input[type="search"],
   input[type="text"] {
     flex: 0 0 65%;
+    margin-bottom: 0;
     margin-right: -$base-spacing-unit;
   }
 }
