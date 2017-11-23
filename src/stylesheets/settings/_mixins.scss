@@ -149,6 +149,9 @@
       border-color: $border-hover;
     }
   }
+  path, polygon {
+    fill: $color;
+  }
 }
 
 /*--- Media Queries [size] ---*/
