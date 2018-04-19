@@ -1,11 +1,7 @@
 .PHONY: install install_to_release clean serve build build_prod test
 
 # When run in gocd it will be injected by environment variable
-AWS_ACCOUNT?=unknown
-AWS_BUCKET?=unknown
-
-# AWS Variables
-BUCKET_URL=s3://$(AWS_ACCOUNT).$(AWS_BUCKET)
+S3_BUCKET?=unknown
 
 # Common variables
 SRC_FOLDER=src
@@ -114,11 +110,11 @@ build_test: lint css js templates
 
 # Deploys to S3 without a version
 deploy:
-	aws s3 rm $(BUCKET_URL)/pugin/images --recursive
-	aws s3 rm $(BUCKET_URL)/pugin/javascripts --recursive
-	aws s3 rm $(BUCKET_URL)/pugin/stylesheets --recursive
-	aws s3 sync --acl=public-read --exclude "templates/*" ./_public/ $(BUCKET_URL)/pugin
+	aws s3 rm $(S3_BUCKET)/pugin/images --recursive
+	aws s3 rm $(S3_BUCKET)/pugin/javascripts --recursive
+	aws s3 rm $(S3_BUCKET)/pugin/stylesheets --recursive
+	aws s3 sync --acl=public-read --exclude "templates/*" ./_public/ $(S3_BUCKET)/pugin
 
 # Deploys to S3 using the latest release
 deploy_to_release:
-	aws s3 sync --acl=public-read --delete --exclude "templates/*" ./_public/ $(BUCKET_URL)/pugin/$(REL_TAG)
+	aws s3 sync --acl=public-read --delete --exclude "templates/*" ./_public/ $(S3_BUCKET)/pugin/$(REL_TAG)
