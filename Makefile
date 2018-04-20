@@ -2,6 +2,10 @@
 
 # When run in gocd it will be injected by environment variable
 AWS_ACCOUNT?=unknown
+AWS_BUCKET?=unknown
+
+# AWS Variables
+BUCKET_URL=s3://$(AWS_ACCOUNT).$(AWS_BUCKET)
 
 # Common variables
 SRC_FOLDER=src
@@ -110,11 +114,11 @@ build_test: lint css js templates
 
 # Deploys to S3 without a version
 deploy:
-	aws s3 rm s3://$(AWS_ACCOUNT).pugin-website/images --recursive
-	aws s3 rm s3://$(AWS_ACCOUNT).pugin-website/javascripts --recursive
-	aws s3 rm s3://$(AWS_ACCOUNT).pugin-website/stylesheets --recursive
-	aws s3 sync --acl=public-read --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website
+	aws s3 rm $(BUCKET_URL)/pugin/images --recursive
+	aws s3 rm $(BUCKET_URL)/pugin/javascripts --recursive
+	aws s3 rm $(BUCKET_URL)/pugin/stylesheets --recursive
+	aws s3 sync --acl=public-read --exclude "templates/*" ./_public/ $(BUCKET_URL)/pugin
 
 # Deploys to S3 using the latest release
 deploy_to_release:
-	aws s3 sync --acl=public-read --delete --exclude "prototypes/*" ./_public/ s3://$(AWS_ACCOUNT).pugin-website/$(REL_TAG)
+	aws s3 sync --acl=public-read --delete --exclude "templates/*" ./_public/ $(BUCKET_URL)/pugin/$(REL_TAG)
