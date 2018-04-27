@@ -119,7 +119,7 @@ body > footer a  {
   &:link {
     padding: $base-spacing-unit-tiny;
     @include media($desktop) {
-      padding: $base-spacing-unit-tiny $base-spacing-unit-medium;
+      padding: $base-spacing-unit-tiny $base-spacing-unit-small;
     }
   }
   &:focus {

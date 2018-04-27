@@ -270,6 +270,7 @@ footer .list {
   flex-wrap: wrap;
 
   li {
+    margin: 0;
     @media (max-width: $desktop - 1) {
       margin-bottom: $base-spacing-unit;
     }
