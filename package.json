@@ -20,10 +20,10 @@
   },
   "main": "server.js",
   "devDependencies": {
-    "autoprefixer": "^9.4.2",
+    "autoprefixer": "^9.4.3",
     "chai": "^4.2.0",
     "chokidar": "^2.0.4",
-    "chromedriver": "^2.44.1",
+    "chromedriver": "^2.45.0",
     "cssnano": "^4.1.7",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
