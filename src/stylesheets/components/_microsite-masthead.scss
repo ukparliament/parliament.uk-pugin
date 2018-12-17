@@ -4,6 +4,9 @@
   .container {
     display: flex;
     justify-content: space-between;
+    > a {
+      @include typography--heavy;
+    }
   }
   ul {
     display: none;
